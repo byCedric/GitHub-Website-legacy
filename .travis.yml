@@ -10,6 +10,7 @@ install:
   - npm ci
 script:
   - npx commitlint-travis
+  - npx eslint ./src
   - npm test
 after_success:
   - npx codecov
