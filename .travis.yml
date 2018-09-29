@@ -9,6 +9,7 @@ cache:
 install:
   - npm ci
 script:
+  - npx commitlint-travis
   - npm test
 after_success:
   - npx codecov
