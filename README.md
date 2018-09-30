@@ -6,7 +6,7 @@ Let your work speak for itself, have a simple site that listens to your GitHub f
 
 [![Latest Release](https://img.shields.io/github/release/byCedric/GitHub-Website/all.svg?style=flat-square)](https://github.com/byCedric/GitHub-Website/releases)
 [![Build Status](https://img.shields.io/travis/com/byCedric/GitHub-Website/develop.svg?style=flat-square)](https://travis-ci.com/byCedric/GitHub-Website)
-[![Codecov coverage](https://img.shields.io/codecov/c/github/byCedric/GitHub-Website.svg?style=flat-square)](https://codecov.io/gh/byCedric/GitHub-Website)
+[![Codecov coverage](https://img.shields.io/codecov/c/github/byCedric/GitHub-Website/develop.svg?style=flat-square)](https://codecov.io/gh/byCedric/GitHub-Website)
 [![Code Climate grade](https://img.shields.io/codeclimate/maintainability/byCedric/GitHub-Website.svg?style=flat-square)](https://codeclimate.com/github/byCedric/GitHub-Website)
 [![Greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-green.svg?style=flat-square)](https://greenkeeper.io/)
 
