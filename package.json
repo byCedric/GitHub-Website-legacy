@@ -1,6 +1,7 @@
 {
-  "name": "bycedric-com",
-  "version": "0.1.0",
+  "name": "@bycedric/github-website",
+  "version": "0.0.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "react": "^16.5.2",
@@ -18,6 +19,12 @@
     "@peakfijn/config-commitlint": "^0.8.0",
     "codecov": "^3.1.0"
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "commitlint": {
     "extends": [
       "@peakfijn/config-commitlint"
@@ -26,12 +33,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "greenkeeper": {
     "commitMessages": {
       "initialBadge": "documentation: add greenkeeper badge",

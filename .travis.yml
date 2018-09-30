@@ -11,6 +11,6 @@ install:
 script:
   - npx commitlint-travis
   - npx eslint ./src
-  - npm test
+  - npm test -- --coverage
 after_success:
   - npx codecov
