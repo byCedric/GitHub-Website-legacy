@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:bycedric/github-website.git"
+    "url": "https://github.com/bycedric/github-website.git"
   },
   "dependencies": {
     "react": "^16.5.2",
