@@ -24,7 +24,7 @@
     "@semantic-release/changelog": "^3.0.0",
     "codecov": "^3.1.0",
     "conventional-changelog-peakfijn": "^0.8.0",
-    "flow-bin": "^0.81.0",
+    "flow-bin": "^0.82.0",
     "release-rules-peakfijn": "^0.8.0",
     "semantic-release": "^15.9.16",
     "semantic-release-git-branches": "^1.2.1",
