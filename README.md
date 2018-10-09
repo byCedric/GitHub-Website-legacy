@@ -2,7 +2,7 @@
 
 As an enthusiastic developer, you might find yourself racing through many projects.
 Keeping your website up to date might become a burden because of this.
-Let your work speak for itself, have a simple site that listens to your GitHub feed!
+Let your work speak for itself, have a simple site shows your GitHub feed!
 
 [![Latest Release](https://img.shields.io/github/release/byCedric/GitHub-Website/all.svg?style=flat-square)](https://github.com/byCedric/GitHub-Website/releases)
 [![Build Status](https://img.shields.io/travis/com/byCedric/GitHub-Website/develop.svg?style=flat-square)](https://travis-ci.com/byCedric/GitHub-Website)
