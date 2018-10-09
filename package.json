@@ -1,72 +1,78 @@
 {
-  "name": "@bycedric/github-website",
-  "version": "0.0.0",
-  "license": "MIT",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bycedric/github-website.git"
-  },
-  "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "2.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "@commitlint/travis-cli": "^7.1.2",
-    "@peakfijn/config-commitlint": "^0.8.0",
-    "@semantic-release/changelog": "^3.0.0",
-    "codecov": "^3.1.0",
-    "conventional-changelog-peakfijn": "^0.8.0",
-    "flow-bin": "^0.81.0",
-    "release-rules-peakfijn": "^0.8.0",
-    "semantic-release": "^15.9.16",
-    "semantic-release-git-branches": "^1.2.1",
-    "stylelint": "^9.6.0",
-    "stylelint-config-concentric-order": "^3.4.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.4.0"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "commitlint": {
-    "extends": [
-      "@peakfijn/config-commitlint"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-concentric-order",
-      "stylelint-config-styled-components"
-    ],
-    "processors": [
-      "stylelint-processor-styled-components"
-    ]
-  },
-  "greenkeeper": {
-    "commitMessages": {
-      "initialBadge": "documentation: add greenkeeper badge",
-      "initialDependencies": "chore: update dependencies",
-      "initialBranches": "chore: whitelist greenkeeper branches",
-      "dependencyUpdate": "refactor: upgrade ${dependency} to version ${version}",
-      "devDependencyUpdate": "refactor: upgrade ${dependency} to version ${version}",
-      "dependencyPin": "fix: freeze ${dependency} to ${oldVersion}",
-      "devDependencyPin": "fix: freeze ${dependency} to ${oldVersion}"
-    }
-  }
+	"name": "@bycedric/github-website",
+	"version": "0.0.0",
+	"license": "MIT",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bycedric/github-website.git"
+	},
+	"dependencies": {
+		"react": "^16.5.2",
+		"react-dom": "^16.5.2",
+		"react-scripts": "2.0.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"devDependencies": {
+		"@commitlint/travis-cli": "^7.1.2",
+		"@peakfijn/config-commitlint": "^0.8.0",
+		"@semantic-release/changelog": "^3.0.0",
+		"codecov": "^3.1.0",
+		"conventional-changelog-peakfijn": "^0.8.0",
+		"flow-bin": "^0.81.0",
+		"release-rules-peakfijn": "^0.8.0",
+		"semantic-release": "^15.9.16",
+		"semantic-release-git-branches": "^1.2.1",
+		"stylelint": "^9.6.0",
+		"stylelint-config-concentric-order": "^3.4.0",
+		"stylelint-config-standard": "^18.2.0",
+		"stylelint-config-styled-components": "^0.1.1",
+		"stylelint-processor-styled-components": "^1.4.0"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"commitlint": {
+		"extends": [
+			"@peakfijn/config-commitlint"
+		]
+	},
+	"eslintConfig": {
+		"extends": "react-app",
+		"rules": {
+			"indent": ["error", "tab"]
+		}
+	},
+	"stylelint": {
+		"extends": [
+			"stylelint-config-standard",
+			"stylelint-config-concentric-order",
+			"stylelint-config-styled-components"
+		],
+		"processors": [
+			"stylelint-processor-styled-components"
+		],
+		"rules": {
+			"indentation": "tab"
+		}
+	},
+	"greenkeeper": {
+		"commitMessages": {
+			"initialBadge": "documentation: add greenkeeper badge",
+			"initialDependencies": "chore: update dependencies",
+			"initialBranches": "chore: whitelist greenkeeper branches",
+			"dependencyUpdate": "refactor: upgrade ${dependency} to version ${version}",
+			"devDependencyUpdate": "refactor: upgrade ${dependency} to version ${version}",
+			"dependencyPin": "fix: freeze ${dependency} to ${oldVersion}",
+			"devDependencyPin": "fix: freeze ${dependency} to ${oldVersion}"
+		}
+	}
 }
