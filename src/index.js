@@ -1,2 +1,2 @@
 import 'src/providers/react';
-import 'src/providers/service-worker';
+// import 'src/providers/service-worker';
