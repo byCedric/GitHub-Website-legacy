@@ -12,7 +12,6 @@ script:
   - npx commitlint-travis
   - npx stylelint ./src/**/*.js
   - npx eslint ./src
-  - npx flow
   - npm test -- --coverage
 after_success:
   - npx codecov
