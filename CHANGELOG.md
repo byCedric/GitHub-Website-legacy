@@ -1,3 +1,30 @@
+# [0.2.0](https://github.com/bycedric/github-website/compare/0.1.0...0.2.0) (2018-10-14)
+
+
+### Bug fixes
+
+* align user description horizontally with small text ([#30](https://github.com/bycedric/github-website/issues/30)) ([6fb0e49](https://github.com/bycedric/github-website/commit/6fb0e49))
+* avatar atom default props overwriting original proptypes ([#36](https://github.com/bycedric/github-website/issues/36)) ([4251cff](https://github.com/bycedric/github-website/commit/4251cff))
+* prefix github username environment variable ([#31](https://github.com/bycedric/github-website/issues/31)) ([80a959a](https://github.com/bycedric/github-website/commit/80a959a))
+
+
+### Code refactors
+
+* disable manifest until names issue is resolved ([#34](https://github.com/bycedric/github-website/issues/34)) ([7a0b43d](https://github.com/bycedric/github-website/commit/7a0b43d)), closes [#33](https://github.com/bycedric/github-website/issues/33)
+* replace static react title with github username ([#32](https://github.com/bycedric/github-website/issues/32)) ([f921faa](https://github.com/bycedric/github-website/commit/f921faa))
+
+
+### New features
+
+* add helmet for proper meta tags ([#37](https://github.com/bycedric/github-website/issues/37)) ([de10abc](https://github.com/bycedric/github-website/commit/de10abc))
+
+
+### Pipeline changes
+
+* disable windows builds due to issues with env vars ([#38](https://github.com/bycedric/github-website/issues/38)) ([67f48f0](https://github.com/bycedric/github-website/commit/67f48f0))
+* enable linux macos and windows ([#35](https://github.com/bycedric/github-website/issues/35)) ([30480a3](https://github.com/bycedric/github-website/commit/30480a3))
+* limit release scripts to linux only ([#40](https://github.com/bycedric/github-website/issues/40)) ([fbc1e73](https://github.com/bycedric/github-website/commit/fbc1e73))
+
 # [0.1.0](https://github.com/bycedric/github-website/compare/0.0.0...0.1.0) (2018-10-13)
 
 
