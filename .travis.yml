@@ -3,18 +3,28 @@ language: node_js
 node_js:
   - node
   - lts/*
+
+os:
+  - linux
+  - osx
+  - windows
+
 cache:
   directories:
     - node_modules
+
 install:
   - npm install
+
 script:
   - npx commitlint-travis
   - npx stylelint ./src/**/*.js
   - npx eslint ./src
   - npm test -- --coverage
+
 after_success:
   - npx codecov
+
 deploy:
   - provider: script
     skip_cleanup: true
