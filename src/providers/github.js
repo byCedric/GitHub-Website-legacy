@@ -24,3 +24,14 @@ export const fetchUser = () => (
  * @return {React.Component}
  */
 export const AsyncUser = createInstance({ promiseFn: fetchUser });
+
+/**
+ * Get all GitHub mentions from a text.
+ * This will try and find all words starting with `@` and return them as array, without extra character.
+ *
+ * @param  {string?} text
+ * @return {string[]}
+ */
+export const findMentions = (text) => (
+	(text || '').match(/@([a-z0-9]+)/gi).map(value => value.substr(1))
+);
