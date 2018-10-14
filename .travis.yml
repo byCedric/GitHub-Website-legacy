@@ -20,6 +20,7 @@ script:
   - npx stylelint ./src/**/*.js
   - npx eslint ./src
   - npx react-scripts test --coverage
+  - npm run build
 
 after_success:
   - npx codecov
@@ -29,6 +30,9 @@ deploy:
     skip_cleanup: true
     script:
       - npx semantic-release --dry-run --branch develop
+      - npm run build
+      - npx now ./build -t $NOW_TOKEN -T personal -A ./now.staging.json
+      - npx now alias -A ./now.staging.json
     on:
       condition: $TRAVIS_OS_NAME = linux
       branch: develop
