@@ -2,19 +2,29 @@
 language: node_js
 node_js:
   - node
-  - lts/*
+  - 8
+
+os:
+  - linux
+  - osx
+  - windows
+
 cache:
   directories:
     - node_modules
+
 install:
   - npm install
+
 script:
   - npx commitlint-travis
   - npx stylelint ./src/**/*.js
   - npx eslint ./src
-  - npm test -- --coverage
+  - npx react-scripts test --coverage
+
 after_success:
   - npx codecov
+
 deploy:
   - provider: script
     skip_cleanup: true
@@ -22,11 +32,11 @@ deploy:
       - npx semantic-release --dry-run --branch develop
     on:
       branch: develop
-      node: lts/*
+      node: 8
   - provider: script
     skip_cleanup: true
     script:
       - npx semantic-release
     on:
       branch: master
-      node: lts/*
+      node: 8
