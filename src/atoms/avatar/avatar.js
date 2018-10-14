@@ -23,6 +23,6 @@ AvatarAtom.propTypes = {
 	title: PropTypes.string,
 };
 
-AvatarAtom.propTypes = {
+AvatarAtom.defaultProps = {
 	title: undefined,
 };
