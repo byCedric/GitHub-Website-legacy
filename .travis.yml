@@ -36,7 +36,7 @@ deploy:
       npx now alias -A ../now.staging.json
     on:
       condition: $TRAVIS_OS_NAME = linux
-      branch: develop
+      branch: pipeline/now-deployments
       node: lts/*
   - provider: script
     skip_cleanup: true
