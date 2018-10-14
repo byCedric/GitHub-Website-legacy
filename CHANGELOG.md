@@ -1,3 +1,30 @@
+## [0.2.1](https://github.com/bycedric/github-website/compare/0.2.0...0.2.1) (2018-10-14)
+
+
+### Bug fixes
+
+* center user full name for multiple lines ([#49](https://github.com/bycedric/github-website/issues/49)) ([7b3be87](https://github.com/bycedric/github-website/commit/7b3be87))
+
+
+### Code refactors
+
+* upgrade react-scripts to version 2.0.5 ([#44](https://github.com/bycedric/github-website/issues/44)) ([11ea017](https://github.com/bycedric/github-website/commit/11ea017))
+
+
+### Other chores
+
+* enable default test script ([#47](https://github.com/bycedric/github-website/issues/47)) ([2879210](https://github.com/bycedric/github-website/commit/2879210))
+
+
+### Pipeline changes
+
+* add build and staging deployments ([#41](https://github.com/bycedric/github-website/issues/41)) ([aaff84b](https://github.com/bycedric/github-website/commit/aaff84b))
+* disable removal of old deployments ([#48](https://github.com/bycedric/github-website/issues/48)) ([70e18c8](https://github.com/bycedric/github-website/commit/70e18c8))
+* move context to build folder to work around unexpected behaviour ([#45](https://github.com/bycedric/github-website/issues/45)) ([935ca46](https://github.com/bycedric/github-website/commit/935ca46))
+* refactor to single-script command in deployment ([#42](https://github.com/bycedric/github-website/issues/42)) ([3d5777a](https://github.com/bycedric/github-website/commit/3d5777a))
+* replace new lines in deployment script with spaces ([#43](https://github.com/bycedric/github-website/issues/43)) ([6252443](https://github.com/bycedric/github-website/commit/6252443))
+* rewrite now deployment script with travis ([#46](https://github.com/bycedric/github-website/issues/46)) ([e68930e](https://github.com/bycedric/github-website/commit/e68930e))
+
 # [0.2.0](https://github.com/bycedric/github-website/compare/0.1.0...0.2.0) (2018-10-14)
 
 
