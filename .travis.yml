@@ -30,6 +30,7 @@ deploy:
     script:
       - npx semantic-release --dry-run --branch develop
     on:
+      condition: $TRAVIS_OS_NAME = linux
       branch: develop
       node: lts/*
   - provider: script
@@ -37,5 +38,6 @@ deploy:
     script:
       - npx semantic-release
     on:
+      condition: $TRAVIS_OS_NAME = linux
       branch: master
       node: lts/*
