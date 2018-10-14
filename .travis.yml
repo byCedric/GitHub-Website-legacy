@@ -31,8 +31,9 @@ deploy:
     script: >
       npx semantic-release --dry-run --branch develop &&
       npm run build &&
-      npx now ./build -t $NOW_TOKEN -T personal -A ./now.staging.json &&
-      npx now alias -A ./now.staging.json
+      cd build &&
+      npx now -t $NOW_TOKEN -T personal -A ../now.staging.json &&
+      npx now alias -A ../now.staging.json
     on:
       condition: $TRAVIS_OS_NAME = linux
       branch: develop
