@@ -33,8 +33,7 @@ deploy:
       npm run build &&
       cp now.staging.json now.json &&
       npx now deploy --token=$NOW_TOKEN --team=personal --name=bycedric-website-staging --regions=bru ./build &&
-      npx now alias --token=$NOW_TOKEN --team=personal &&
-      npx now rm --token=$NOW_TOKEN --team=personal --safe --yes bycedric-website-staging
+      npx now alias --token=$NOW_TOKEN --team=personal
     on:
       condition: $TRAVIS_OS_NAME = linux
       branch: develop
