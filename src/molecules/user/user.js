@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'src/atoms/avatar';
+import UserMeta from './user-meta';
 import {
 	UserContainer,
 	UserAvatar,
@@ -13,6 +14,11 @@ export default function UserMolecule(props) {
 
 	return (
 		<UserContainer>
+			<UserMeta
+				title={identifier}
+				description={props.description}
+				keywords={[props.name, props.username]}
+			/>
 			<UserAvatar>
 				<Avatar
 					url={props.avatarUrl}
