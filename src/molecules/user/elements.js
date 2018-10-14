@@ -31,6 +31,7 @@ export const UserName = styled.h1`
 	flex: 0;
 	margin: 0;
 	padding: 0.5rem;
+	text-align: center;
 	line-height: 1.5;
 	color: #24292e;
 	font-size: 2em;
