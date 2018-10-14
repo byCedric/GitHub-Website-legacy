@@ -1,0 +1,10 @@
+{
+	"public": true,
+	"type": "static",
+	"name": "bycedric-website-staging",
+	"alias": [
+		"staging.bycedric.com",
+		"staging-bycedric.now.sh",
+		"staging-github.now.sh"
+	]
+}
