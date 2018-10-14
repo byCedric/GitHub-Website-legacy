@@ -28,12 +28,13 @@ after_success:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: >
+    script: >-
       npx semantic-release --dry-run --branch develop &&
       npm run build &&
-      cd build &&
-      npx now -t $NOW_TOKEN -T personal -A ../now.staging.json &&
-      npx now alias -A ../now.staging.json
+      cp now.staging.json now.json &&
+      npx now deploy --token=$NOW_TOKEN --team=personal --name=bycedric-website-staging --regions=bru ./build &&
+      npx now alias --token=$NOW_TOKEN --team=personal &&
+      npx now rm --token=$NOW_TOKEN --team=personal --safe --yes bycedric-website-staging
     on:
       condition: $TRAVIS_OS_NAME = linux
       branch: develop
