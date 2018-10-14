@@ -45,6 +45,7 @@ export const UserDescription = styled.p`
 	display: flex;
 	flex: 1;
 	align-items: flex-start;
+	justify-content: center;
 	margin: 0;
 	padding: 0.5rem;
 	width: 100%;
