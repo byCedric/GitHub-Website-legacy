@@ -20,7 +20,7 @@ script:
   - npx commitlint-travis
   - npx stylelint ./src/**/*.js
   - npx eslint ./src
-  - npm test -- --coverage
+  - npx react-scripts test --coverage
 
 after_success:
   - npx codecov
