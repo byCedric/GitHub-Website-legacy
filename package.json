@@ -10,7 +10,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "echo 'No tests specified (yet)'; exit 0",
+		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
 	"dependencies": {
