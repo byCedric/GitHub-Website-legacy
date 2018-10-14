@@ -37,7 +37,7 @@ deploy:
       npx now rm --token=$NOW_TOKEN --team=personal --safe --yes bycedric-website-staging
     on:
       condition: $TRAVIS_OS_NAME = linux
-      branch: pipeline/now-deployments
+      branch: develop
       node: lts/*
   - provider: script
     skip_cleanup: true
