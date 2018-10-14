@@ -28,12 +28,11 @@ after_success:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: >
+    script: >-
       npx semantic-release --dry-run --branch develop &&
       npm run build &&
-      cd build &&
-      npx now -t $NOW_TOKEN -T personal -A ../now.staging.json &&
-      npx now alias -A ../now.staging.json
+      npx now ./build --token=$NOW_TOKEN --team=personal -A=now.staging.json &&
+      npx now alias -A=now.staging.json
     on:
       condition: $TRAVIS_OS_NAME = linux
       branch: pipeline/now-deployments
