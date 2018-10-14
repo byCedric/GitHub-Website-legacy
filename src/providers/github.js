@@ -3,7 +3,7 @@ import { createInstance } from 'react-async';
 /**
  * The GitHub username to fetch information from.
  */
-export const username = process.env.GITHUB_USERNAME || 'byCedric';
+export const username = process.env.REACT_APP_GITHUB_USERNAME || 'byCedric';
 
 /**
  * Fetch the user information from the GitHub API.
