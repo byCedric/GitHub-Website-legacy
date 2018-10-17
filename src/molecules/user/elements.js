@@ -42,7 +42,7 @@ export const UserName = styled.h1`
  * Because of this flexbox positioning, the size of the text has no impact on the alignment.
  * This technique is also applied for the avatar to center the name correctly.
  */
-export const UserDescription = styled.p`
+export const UserDescription = styled.div`
 	display: flex;
 	flex: 1;
 	align-items: flex-start;
@@ -53,4 +53,12 @@ export const UserDescription = styled.p`
 	max-width: 24em;
 	text-align: center;
 	line-height: 1.5;
+`;
+
+/**
+ * The user description highlight styles a single word within this description.
+ */
+export const UserDescriptionHighlight = styled.strong`
+	color: #24292e;
+	font-weight: 600;
 `;
