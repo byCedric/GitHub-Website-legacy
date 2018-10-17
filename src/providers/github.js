@@ -33,5 +33,5 @@ export const AsyncUser = createInstance({ promiseFn: fetchUser });
  * @return {string[]}
  */
 export const findMentions = (text) => (
-	(text || '').match(/@([a-z0-9]+)/gi).map(value => value.substr(1))
+	(text || '').match(/[@#]([a-z0-9]+)/gi).map(value => value.substr(1))
 );
