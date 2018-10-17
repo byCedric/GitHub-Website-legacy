@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { findMentions } from 'src/providers/github';
+import { findKeywords } from 'src/providers/github';
 import { propTypes, defaultProps } from './prop-type';
 
 export default function UserMoleculeMeta(props) {
@@ -9,7 +9,7 @@ export default function UserMoleculeMeta(props) {
 		: `${props.name} (${props.username})`;
 
 	const keywords = props.description
-		? [props.name, props.username].concat(findMentions(props.description))
+		? [props.name, props.username].concat(findKeywords(props.description))
 		: [props.name, props.username];
 
 	const nameSegments = props.name.split(' ');
