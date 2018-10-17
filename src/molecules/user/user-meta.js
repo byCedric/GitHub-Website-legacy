@@ -23,7 +23,7 @@ export default function UserMoleculeMeta(props) {
 			<meta name="keywords" content={keywords.join(', ')} />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={props.description} />
-			<meta property="og:image" content={props.avatarUrl} />
+			<meta property="og:image" content={`${props.avatarUrl}?size=240`} />
 			<meta property="profile:username" content={props.username} />
 			<meta property="profile:first_name" content={nameFirst} />
 			<meta property="profile:last_name" content={nameLast} />
