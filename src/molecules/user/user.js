@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Avatar from 'src/atoms/avatar';
+import { propTypes, defaultProps } from './prop-type';
 import UserMeta from './user-meta';
 import {
 	UserContainer,
@@ -14,11 +14,7 @@ export default function UserMolecule(props) {
 
 	return (
 		<UserContainer>
-			<UserMeta
-				title={identifier}
-				description={props.description}
-				keywords={[props.name, props.username]}
-			/>
+			<UserMeta {...props} />
 			<UserAvatar>
 				<Avatar
 					url={props.avatarUrl}
@@ -36,17 +32,5 @@ export default function UserMolecule(props) {
 	);
 }
 
-UserMolecule.propTypes = {
-	/** The full name of the person who is displayed. */
-	name: PropTypes.string.isRequired,
-	/** The username of the person who is displayed. */
-	username: PropTypes.string.isRequired,
-	/** The absolute URL of the person's avatar.  */
-	avatarUrl: PropTypes.string.isRequired,
-	/** An optional description of this person. */
-	description: PropTypes.string,
-};
-
-UserMolecule.defaultProps = {
-	description: '',
-};
+UserMolecule.propTypes = propTypes;
+UserMolecule.defaultProps = defaultProps;
