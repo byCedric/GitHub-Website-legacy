@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 /**
  * The app container wraps the content and centers it both horizontally and vertically.
