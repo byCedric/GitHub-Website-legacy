@@ -19,6 +19,7 @@ export default function RepositoryMolecule(props) {
 			extra={(
 				<Icon type="github"></Icon>
 			)}
+			loading={props.loading}
 		>
 			<RepositoryCardContent>
 				{props.description}
@@ -48,6 +49,8 @@ RepositoryMolecule.propTypes = {
 	updatedAt: PropTypes.string,
 	/** Link to repository */
 	url: PropTypes.string,
+	/** Link to repository */
+	loading: PropTypes.bool,
 };
 
 RepositoryMolecule.defaultProps = {
@@ -55,4 +58,5 @@ RepositoryMolecule.defaultProps = {
 	stars: 0,
 	language: '',
 	url: undefined,
+	loading: false,
 };
