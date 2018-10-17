@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from 'src/atoms/avatar';
+import Highlight from 'src/atoms/highlight';
 import { propTypes, defaultProps } from './prop-type';
 import UserMeta from './user-meta';
 import {
@@ -7,7 +8,13 @@ import {
 	UserAvatar,
 	UserName,
 	UserDescription,
+	UserDescriptionHighlight,
 } from './elements';
+
+const decorators = {
+	'@': (segment, match, key) => <UserDescriptionHighlight key={key}>{segment}</UserDescriptionHighlight>,
+	'#': (segment, match, key) => <UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>,
+};
 
 export default function UserMolecule(props) {
 	const identifier = `${props.name} (${props.username})`;
@@ -26,7 +33,9 @@ export default function UserMolecule(props) {
 				{props.name}
 			</UserName>
 			<UserDescription>
-				{props.description}
+				<Highlight decorators={decorators}>
+					{props.description}
+				</Highlight>
 			</UserDescription>
 		</UserContainer>
 	);
