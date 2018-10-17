@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Avatar from 'src/atoms/avatar';
+import GithubMentions from 'src/atoms/github-mentions';
+
 import UserMeta from './user-meta';
 import {
 	UserContainer,
@@ -30,7 +33,9 @@ export default function UserMolecule(props) {
 				{props.name}
 			</UserName>
 			<UserDescription>
-				{props.description}
+				<GithubMentions>
+					{props.description}
+				</GithubMentions>
 			</UserDescription>
 		</UserContainer>
 	);
