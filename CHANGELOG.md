@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/bycedric/github-website/compare/0.3.0...0.3.1) (2018-10-18)
+
+
+### Bug fixes
+
+* return empty array when no github keywords are found ([#62](https://github.com/bycedric/github-website/issues/62)) ([67bacbe](https://github.com/bycedric/github-website/commit/67bacbe))
+
 # [0.3.0](https://github.com/bycedric/github-website/compare/0.2.1...0.3.0) (2018-10-18)
 
 
