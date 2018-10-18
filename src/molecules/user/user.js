@@ -1,19 +1,31 @@
-import React from 'react';
-import Avatar from 'src/atoms/avatar';
-import Highlight from 'src/atoms/highlight';
-import { propTypes, defaultProps } from './prop-type';
-import UserMeta from './user-meta';
+import React from "react";
+import UserMeta from "./user-meta";
+import Avatar from "src/atoms/avatar";
+import Highlight from "src/atoms/highlight";
+import { propTypes, defaultProps } from "./prop-type";
+import { mentionLink } from "./util";
 import {
 	UserContainer,
 	UserAvatar,
 	UserName,
 	UserDescription,
-	UserDescriptionHighlight,
-} from './elements';
+	UserDescriptionHighlight
+} from "./elements";
 
 const decorators = {
-	'@': (segment, match, key) => <UserDescriptionHighlight key={key}>{segment}</UserDescriptionHighlight>,
-	'#': (segment, match, key) => <UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>,
+	"@": (segment, match, key) => (
+		<UserDescriptionHighlight
+			key={key}
+			href={mentionLink(segment)}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{segment}
+		</UserDescriptionHighlight>
+	),
+	"#": (segment, match, key) => (
+		<UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>
+	)
 };
 
 export default function UserMolecule(props) {
@@ -23,19 +35,11 @@ export default function UserMolecule(props) {
 		<UserContainer>
 			<UserMeta {...props} />
 			<UserAvatar>
-				<Avatar
-					url={props.avatarUrl}
-					name={identifier}
-					title={identifier}
-				/>
+				<Avatar url={props.avatarUrl} name={identifier} title={identifier} />
 			</UserAvatar>
-			<UserName title={identifier}>
-				{props.name}
-			</UserName>
+			<UserName title={identifier}>{props.name}</UserName>
 			<UserDescription>
-				<Highlight decorators={decorators}>
-					{props.description}
-				</Highlight>
+				<Highlight decorators={decorators}>{props.description}</Highlight>
 			</UserDescription>
 		</UserContainer>
 	);

@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
 /**
  * The user container creates a vertical-directed flexbox.
@@ -58,7 +58,8 @@ export const UserDescription = styled.div`
 /**
  * The user description highlight styles a single word within this description.
  */
-export const UserDescriptionHighlight = styled.strong`
+export const UserDescriptionHighlight = styled.a`
 	color: #24292e;
-	font-weight: 600;
+	font-weight: 700;
+	text-decoration: none;
 `;

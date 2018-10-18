@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
 /**
  * The avatar container "masks" the underlying image and makes it circular.
