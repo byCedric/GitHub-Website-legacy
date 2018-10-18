@@ -1,11 +1,10 @@
 import styled from 'styled-components/macro';
 
 /**
- * The user container creates a block that should fully contain the necessary user information.
- * It will push other content, like event cards, below this content.
+ * The user container defines some basic styling for all elements inside.
  */
 export const UserContainer = styled.div`
-	/*width: 100%;*/
+	color: #6a737d;
 `;
 
 /**
@@ -61,7 +60,6 @@ export const UserDescription = styled.div`
 	max-width: 24em;
 	text-align: center;
 	line-height: 1.5;
-	color: #6a737d;
 `;
 
 /**
