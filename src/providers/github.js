@@ -28,10 +28,30 @@ export const fetchUser = () => (
 )
 
 /**
- * Export a predefined React Async component instance.
+ * Export a predefined React Async component instance to fetch the user.
  * This creates a custom context for improved nesting and predefines the promise.
  *
  * @see    https://github.com/ghengeveld/react-async
  * @return {React.Component}
  */
 export const AsyncUser = createInstance({ promiseFn: fetchUser });
+
+/**
+ * Fetch the user (public) events from the GitHub API.
+ *
+ * @see    https://developer.github.com/v3/activity/events/
+ * @return {Promise}
+ */
+export const fetchEvents = () => (
+	fetch(`https://api.github.com/users/${username}/events/public?per_page=100`)
+		.then(response => response.json())
+);
+
+/**
+ * Export a predefined React Async component instance to fetch the events.
+ * This creates a custom context for improved nesting and predefines the promise.
+ *
+ * @see    https://github.com/ghengeveld/react-async
+ * @return {React.Component}
+ */
+export const AsyncEvents = createInstance({ promiseFn: fetchEvents });
