@@ -1,19 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 import Avatar from './avatar';
 
-describe('atoms/avatar', () => {
-	it('renders without crashing', () => {
-		const div = document.createElement('div');
-		const component = (
+describe('atoms/avatar/avatar', () => {
+	it('renders an image element', () => {
+		const component = mount(
 			<Avatar
-				url="https://avatars2.githubusercontent.com/u/1203991?v=4"
-				name="Cedric van Putten"
-				title="Cedric van Putten - @byCedric"
+				url='https://github.com/bycedric.png'
+				name='Cedric van Putten'
+				title='Cedric van Putten - @byCedric'
 			/>
 		);
 
-		ReactDOM.render(component, div);
-		ReactDOM.unmountComponentAtNode(div);
-	});
+		expect(component.find('img'))
+			.toExist()
+			.toMatchSelector('[src="https://github.com/bycedric.png"]')
+			.toMatchSelector('[alt="Cedric van Putten"]')
+			.toMatchSelector('[title="Cedric van Putten - @byCedric"]')
+	})
 });
