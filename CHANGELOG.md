@@ -1,3 +1,34 @@
+## [0.3.1](https://github.com/bycedric/github-website/compare/0.3.0...0.3.1) (2018-10-18)
+
+
+### Bug fixes
+
+* return empty array when no github keywords are found ([#62](https://github.com/bycedric/github-website/issues/62)) ([67bacbe](https://github.com/bycedric/github-website/commit/67bacbe))
+
+# [0.3.0](https://github.com/bycedric/github-website/compare/0.2.1...0.3.0) (2018-10-18)
+
+
+### Bug fixes
+
+* add missing image open graph tags ([#53](https://github.com/bycedric/github-website/issues/53)) ([34686cd](https://github.com/bycedric/github-website/commit/34686cd))
+
+
+### Code refactors
+
+* upgrade styled-components to version 4.0.0 ([#51](https://github.com/bycedric/github-website/issues/51)) ([39311d0](https://github.com/bycedric/github-website/commit/39311d0))
+
+
+### New features
+
+* add highlights to user description ([#55](https://github.com/bycedric/github-website/issues/55)) ([f72a007](https://github.com/bycedric/github-website/commit/f72a007))
+* add support for easy now deployments ([#61](https://github.com/bycedric/github-website/issues/61)) ([37d2dc4](https://github.com/bycedric/github-website/commit/37d2dc4))
+* integrate open graph tags with helmet ([#52](https://github.com/bycedric/github-website/issues/52)) ([7b1a392](https://github.com/bycedric/github-website/commit/7b1a392))
+
+
+### Other chores
+
+* integrate styled components macro for easy debugging ([#57](https://github.com/bycedric/github-website/issues/57)) ([765c927](https://github.com/bycedric/github-website/commit/765c927))
+
 ## [0.2.1](https://github.com/bycedric/github-website/compare/0.2.0...0.2.1) (2018-10-14)
 
 

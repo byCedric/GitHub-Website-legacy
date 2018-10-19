@@ -1,6 +1,6 @@
 {
 	"name": "@bycedric/github-website",
-	"version": "0.2.1",
+	"version": "0.3.1",
 	"license": "MIT",
 	"private": true,
 	"repository": {
@@ -27,6 +27,10 @@
 		"@semantic-release/changelog": "^3.0.0",
 		"codecov": "^3.1.0",
 		"conventional-changelog-peakfijn": "^0.8.0",
+		"enzyme": "^3.7.0",
+		"enzyme-adapter-react-16": "^1.6.0",
+		"jest-chain": "^1.0.4",
+		"jest-enzyme": "^7.0.0",
 		"now": "^11.4.6",
 		"react-scripts": "2.0.5",
 		"release-rules-peakfijn": "^0.8.0",

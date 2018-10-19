@@ -1,10 +1,12 @@
 import React from 'react';
 import Avatar from 'src/atoms/avatar';
 import Highlight from 'src/atoms/highlight';
-import UserMeta from './user-meta';
 import { propTypes, defaultProps } from './prop-type';
+import UserMeta from './user-meta';
 import {
 	UserContainer,
+	UserContainerMeta,
+	UserContainerInfo,
 	UserAvatar,
 	UserName,
 	UserDescription,
@@ -32,18 +34,26 @@ export default function UserMolecule(props) {
 
 	return (
 		<UserContainer>
-			<UserMeta {...props} />
-			<UserAvatar>
-				<Avatar
-					url={props.avatarUrl}
-					name={identifier}
-					title={identifier}
-				/>
-			</UserAvatar>
-			<UserName title={identifier}>{props.name}</UserName>
-			<UserDescription>
-				<Highlight decorators={decorators}>{props.description}</Highlight>
-			</UserDescription>
+			<UserContainerMeta>
+				<UserMeta {...props} />
+				<UserAvatar>
+					<Avatar
+						url={props.avatarUrl}
+						name={identifier}
+						title={identifier}
+					/>
+				</UserAvatar>
+				<UserName title={identifier}>
+					{props.name}
+				</UserName>
+			</UserContainerMeta>
+			<UserContainerInfo>
+				<UserDescription>
+					<Highlight decorators={decorators}>
+						{props.description}
+					</Highlight>
+				</UserDescription>
+			</UserContainerInfo>
 		</UserContainer>
 	);
 }

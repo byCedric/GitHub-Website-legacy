@@ -1,0 +1,11 @@
+{
+	"type": "docker",
+	"features": {
+		"cloud": "v2"
+	},
+	"build": {
+		"env": [
+			"GITHUB_USERNAME"
+		]
+	}
+}
