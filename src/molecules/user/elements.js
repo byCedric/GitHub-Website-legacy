@@ -66,7 +66,7 @@ export const UserDescription = styled.div`
  * The user's description highlights styles keywords within this description.
  */
 export const UserDescriptionHighlight = styled.a`
+	text-decoration: none;
 	color: #24292e;
 	font-weight: 600;
-	text-decoration: none;
 `;
