@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import decorator from "./decorator";
-import { HighlightContainer } from "./elements";
+import React from 'react';
+import PropTypes from 'prop-types';
+import decorator from './decorator';
+import { HighlightContainer } from './elements';
 
 export default function HighlightAtom(props) {
 	return (
