@@ -3,7 +3,6 @@ import Avatar from 'src/atoms/avatar';
 import Highlight from 'src/atoms/highlight';
 import UserMeta from './user-meta';
 import { propTypes, defaultProps } from './prop-type';
-import { mentionLink } from './util';
 import {
 	UserContainer,
 	UserAvatar,
@@ -16,7 +15,7 @@ const decorators = {
 	'@': (segment, match, key) => (
 		<UserDescriptionHighlight
 			key={key}
-			href={mentionLink(segment)}
+			href={`https://github.com/${match}`}
 			target='_blank'
 			rel='noopener noreferrer'
 		>
