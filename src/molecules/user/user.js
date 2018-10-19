@@ -10,7 +10,7 @@ import {
 	UserName,
 	UserDescription,
 	UserDescriptionHighlight
-} from "./elements";
+} from './elements';
 
 const decorators = {
 	'@': (segment, match, key) => (
