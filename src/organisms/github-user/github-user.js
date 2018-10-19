@@ -1,6 +1,7 @@
 import React from 'react';
 import { AsyncUser } from 'src/providers/github';
 import User from 'src/molecules/user';
+import highlights from './highlights';
 
 export default function GithubUserOrganism() {
 	return (
@@ -12,6 +13,7 @@ export default function GithubUserOrganism() {
 						username={data.login}
 						avatarUrl={data.avatar_url}
 						description={data.bio}
+						highlights={highlights}
 					/>
 				)}
 			</AsyncUser.Resolved>
