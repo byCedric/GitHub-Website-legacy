@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 /**
  * The user container creates a vertical-directed flexbox.
