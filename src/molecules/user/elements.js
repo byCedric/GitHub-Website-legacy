@@ -60,6 +60,6 @@ export const UserDescription = styled.div`
  */
 export const UserDescriptionHighlight = styled.a`
 	color: #24292e;
-	font-weight: 700;
+	font-weight: 600;
 	text-decoration: none;
 `;
