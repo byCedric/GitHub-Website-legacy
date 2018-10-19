@@ -15,5 +15,5 @@ HighlightAtom.propTypes = {
 	/** The text to highlight with the decorators. */
 	children: PropTypes.string.isRequired,
 	/** All decorators with their starting character. */
-	decorators: PropTypes.object.isRequired
+	decorators: PropTypes.object.isRequired,
 };
