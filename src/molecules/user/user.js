@@ -1,9 +1,9 @@
-import React from "react";
-import UserMeta from "./user-meta";
-import Avatar from "src/atoms/avatar";
-import Highlight from "src/atoms/highlight";
-import { propTypes, defaultProps } from "./prop-type";
-import { mentionLink } from "./util";
+import React from 'react';
+import Avatar from 'src/atoms/avatar';
+import Highlight from 'src/atoms/highlight';
+import UserMeta from './user-meta';
+import { propTypes, defaultProps } from './prop-type';
+import { mentionLink } from './util';
 import {
 	UserContainer,
 	UserAvatar,
@@ -13,7 +13,7 @@ import {
 } from "./elements";
 
 const decorators = {
-	"@": (segment, match, key) => (
+	'@': (segment, match, key) => (
 		<UserDescriptionHighlight
 			key={key}
 			href={mentionLink(segment)}
@@ -23,7 +23,7 @@ const decorators = {
 			{segment}
 		</UserDescriptionHighlight>
 	),
-	"#": (segment, match, key) => (
+	'#': (segment, match, key) => (
 		<UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>
 	)
 };
