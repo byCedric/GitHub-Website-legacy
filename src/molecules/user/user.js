@@ -17,8 +17,8 @@ const decorators = {
 		<UserDescriptionHighlight
 			key={key}
 			href={mentionLink(segment)}
-			target="_blank"
-			rel="noopener noreferrer"
+			target='_blank'
+			rel='noopener noreferrer'
 		>
 			{segment}
 		</UserDescriptionHighlight>
