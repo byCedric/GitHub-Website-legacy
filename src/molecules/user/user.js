@@ -14,8 +14,19 @@ import {
 } from './elements';
 
 const decorators = {
-	'@': (segment, match, key) => <UserDescriptionHighlight key={key}>{segment}</UserDescriptionHighlight>,
-	'#': (segment, match, key) => <UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>,
+	'@': (segment, match, key) => (
+		<UserDescriptionHighlight
+			key={key}
+			href={`https://github.com/${match}`}
+			target='_blank'
+			rel='noopener noreferrer'
+		>
+			{segment}
+		</UserDescriptionHighlight>
+	),
+	'#': (segment, match, key) => (
+		<UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>
+	)
 };
 
 export default function UserMolecule(props) {
