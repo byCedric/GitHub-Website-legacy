@@ -10,24 +10,7 @@ import {
 	UserAvatar,
 	UserName,
 	UserDescription,
-	UserDescriptionHighlight,
 } from './elements';
-
-const decorators = {
-	'@': (segment, match, key) => (
-		<UserDescriptionHighlight
-			key={key}
-			href={`https://github.com/${match}`}
-			target='_blank'
-			rel='noopener noreferrer'
-		>
-			{segment}
-		</UserDescriptionHighlight>
-	),
-	'#': (segment, match, key) => (
-		<UserDescriptionHighlight key={key}>{match}</UserDescriptionHighlight>
-	)
-};
 
 export default function UserMolecule(props) {
 	const identifier = `${props.name} (${props.username})`;
@@ -49,7 +32,7 @@ export default function UserMolecule(props) {
 			</UserContainerMeta>
 			<UserContainerInfo>
 				<UserDescription>
-					<Highlight decorators={decorators}>
+					<Highlight decorators={props.highlights}>
 						{props.description}
 					</Highlight>
 				</UserDescription>

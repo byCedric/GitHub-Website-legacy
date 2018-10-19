@@ -9,8 +9,11 @@ export const propTypes = {
 	avatarUrl: PropTypes.string.isRequired,
 	/** An optional description of this person. */
 	description: PropTypes.string,
+	/** An optional object with all decorators for user's description highlights. */
+	highlights: PropTypes.object,
 };
 
 export const defaultProps = {
 	description: '',
+	highlights: {},
 };
