@@ -8,7 +8,7 @@ import {
 	UserAvatar,
 	UserName,
 	UserDescription,
-	UserDescriptionHighlight
+	UserDescriptionHighlight,
 } from './elements';
 
 const decorators = {
@@ -34,7 +34,11 @@ export default function UserMolecule(props) {
 		<UserContainer>
 			<UserMeta {...props} />
 			<UserAvatar>
-				<Avatar url={props.avatarUrl} name={identifier} title={identifier} />
+				<Avatar
+					url={props.avatarUrl}
+					name={identifier}
+					title={identifier}
+				/>
 			</UserAvatar>
 			<UserName title={identifier}>{props.name}</UserName>
 			<UserDescription>
