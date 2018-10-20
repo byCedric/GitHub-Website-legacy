@@ -5,7 +5,7 @@ import { GithubUserKeywordHighlight } from '../elements';
 export default function GithubUserOrganismKeyword(props) {
 	return (
 		<GithubUserKeywordHighlight>
-			{props.children}
+			{props.label}
 		</GithubUserKeywordHighlight>
 	);
 }
