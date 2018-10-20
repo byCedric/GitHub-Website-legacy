@@ -5,7 +5,7 @@ import { propTypes, defaultProps } from './prop-type';
 
 export default function UserMoleculeMeta(props) {
 	const title = props.description
-		? `${props.name} (${props.username}) – ${props.description}`
+		? `${props.name} (${props.username}) - ${props.description}`
 		: `${props.name} (${props.username})`;
 
 	const keywords = props.description
