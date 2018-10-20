@@ -19,11 +19,11 @@ describe('organisms/github-user/highlights/mention', () => {
 
 	it('defines a (partial) decorator for "@" character', () => {
 		const component = mount(
-			HighlightMention.decorator['@']('match', 'text', '1337')
+			HighlightMention.decorator['@']('match', 'text')
 		);
 
-		expect(component.find('a'))
-			.toHaveText('match')
-			.toMatchSelector('[href="https://github.com/text"]');
+		expect(component.update().find(HighlightMention))
+			.toHaveProp('label', 'match')
+			.toHaveProp('username', 'text');
 	});
 });

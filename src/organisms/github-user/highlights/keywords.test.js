@@ -13,9 +13,10 @@ describe('organisms/github-user/highlights/keyword', () => {
 
 	it('defines a (partial) decorator for "#" character', () => {
 		const component = mount(
-			HighlightKeyword.decorator['#']('match', 'text', '1337')
+			HighlightKeyword.decorator['#']('match', 'text')
 		);
 
-		expect(component).toHaveText('text');
+		expect(component.update().find(HighlightKeyword))
+			.toHaveProp('label', 'text');
 	});
 });
