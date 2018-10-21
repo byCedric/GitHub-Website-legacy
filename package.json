@@ -15,11 +15,13 @@
 	},
 	"dependencies": {
 		"moment": "^2.22.2",
+		"node-emoji": "^1.8.1",
 		"prop-types": "^15.6.2",
 		"react": "^16.5.2",
 		"react-async": "^3.8.1",
 		"react-dom": "^16.5.2",
 		"react-helmet": "^5.2.0",
+		"remove-markdown": "^0.3.0",
 		"styled-components": "^4.0.0"
 	},
 	"devDependencies": {
