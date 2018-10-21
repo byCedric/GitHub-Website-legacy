@@ -36,16 +36,27 @@ export const fetchUser = () => (
  */
 export const AsyncUser = createInstance({ promiseFn: fetchUser });
 
+// All loaded events, stored to return on every request, using the fetch event method
+let events = [];
+
 /**
  * Fetch the user (public) events from the GitHub API.
  *
  * @see    https://developer.github.com/v3/activity/events/
  * @return {Promise}
  */
-export const fetchEvents = () => (
-	fetch(`https://api.github.com/users/${username}/events/public?per_page=100`)
-		.then(response => response.json())
-);
+export const fetchEvents = async (props) => {
+	const page = props.page || 1;
+	const perPage = props.perPage || 50;
+	const data = (
+		await fetch(`https://api.github.com/users/${username}/events/public?per_page=${perPage}&page=${page}`)
+			.then(response => response.json())
+	);
+
+	events = events.concat(data);
+
+	return { events, page, hasNext: data.length >= perPage };
+};
 
 /**
  * Export a predefined React Async component instance to fetch the events.
@@ -54,4 +65,7 @@ export const fetchEvents = () => (
  * @see    https://github.com/ghengeveld/react-async
  * @return {React.Component}
  */
-export const AsyncEvents = createInstance({ promiseFn: fetchEvents });
+export const AsyncEvents = createInstance({
+	promiseFn: fetchEvents,
+	deferFn: fetchEvents,
+});
