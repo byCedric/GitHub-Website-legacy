@@ -11,4 +11,9 @@ export const Button = styled.button`
 	font-family: inherit;
 	font-size: 0.75em;
 	font-weight: 600;
+
+	&:disabled {
+		opacity: 0.25;
+		box-shadow: none;
+	}
 `;

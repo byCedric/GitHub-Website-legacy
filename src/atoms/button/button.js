@@ -4,7 +4,7 @@ import { Button } from './elements';
 
 export default function ButtonAtom(props) {
 	return (
-		<Button onClick={props.onClick}>
+		<Button {...props}>
 			{props.children}
 		</Button>
 	);
@@ -12,5 +12,4 @@ export default function ButtonAtom(props) {
 
 ButtonAtom.propTypes = {
 	children: PropTypes.string,
-	onClick: PropTypes.func,
 }
