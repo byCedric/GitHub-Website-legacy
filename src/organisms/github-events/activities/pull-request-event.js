@@ -1,16 +1,22 @@
 import React from 'react';
-import Event from 'src/molecules/event';
+import removeMarkdown from 'remove-markdown';
+import Card from 'src/molecules/card';
 
-export default function PullRequestEvent(props) {
-	return (
-		<Event
-			type={`${props.payload.action} pull request`}
-			title={props.payload.pull_request.title}
-			timestamp={props.payload.pull_request.updated_at}
-			repository={props.repo.name}
-			url={props.payload.pull_request.html_url}
-		/>
-	);
+export default function PullRequestEventActivity(props) {
+	if (props.payload.action === 'opened') {
+		return (
+			<Card
+				action={`${props.payload.action} pull request`}
+				repository={props.repo.name}
+				timestamp={props.payload.pull_request.updated_at}
+				title={props.payload.pull_request.title}
+				description={removeMarkdown(props.payload.pull_request.body).trim()}
+				link={props.payload.pull_request.html_url}
+			/>
+		);
+	}
+
+	return null;
 }
 
-PullRequestEvent.type = 'PullRequestEvent';
+PullRequestEventActivity.type = 'PullRequestEvent';

@@ -1,17 +1,19 @@
 import React from 'react';
-import Event from 'src/molecules/event';
+import { emojify } from 'node-emoji';
+import removeMarkdown from 'remove-markdown';
+import Card from 'src/molecules/card';
 
-export default function ActivityIssueCommentEvent(props) {
+export default function IssueCommentEventActivity(props) {
 	return (
-		<Event
-			type={`${props.payload.action} comment`}
-			title={props.payload.comment.body}
-			description={props.payload.issue.title}
-			timestamp={props.payload.comment.created_at}
+		<Card
+			action={`${props.payload.action} comment`}
 			repository={props.repo.name}
-			url={props.payload.comment.html_url}
+			timestamp={props.payload.comment.created_at}
+			title={emojify(props.payload.comment.body)}
+			description={removeMarkdown(props.payload.comment.body)}
+			link={props.payload.comment.html_url}
 		/>
 	);
 }
 
-ActivityIssueCommentEvent.type = 'IssueCommentEvent';
+IssueCommentEventActivity.type = 'IssueCommentEvent';
