@@ -5,6 +5,8 @@ import {
 	findKeywords,
 	fetchUser,
 	AsyncUser,
+	fetchEvents,
+	AsyncEvents,
 } from './github';
 
 describe('providers/github', () => {
@@ -43,7 +45,7 @@ describe('providers/github', () => {
 
 	describe('fetchUser', () => {
 		it('fetches the github user data', async () => {
-			global.fetch = jest.fn().mockResolvedValue({ ok: true, json: () => ({ username }) });
+			global.fetch = jest.fn().mockResolvedValue({ json: () => ({ username }) });
 
 			expect(await fetchUser()).toEqual({ username });
 			expect(fetch).toHaveBeenCalledWith(`https://api.github.com/users/${username}`);
@@ -51,8 +53,8 @@ describe('providers/github', () => {
 	});
 
 	describe('AsyncUser', () => {
-		it('fetches the github user data with a component', async () => {
-			const promise = Promise.resolve({ ok: true, json: () => ({ username }) });
+		it('fetches the github user data with react async', async () => {
+			const promise = Promise.resolve({ json: () => ({ username }) });
 
 			global.fetch = jest.fn(() => promise);
 
@@ -63,9 +65,41 @@ describe('providers/github', () => {
 			);
 
 			expect(component).toBeEmptyRender();
+
 			await promise;
+
 			expect(component).toIncludeText(username);
-			expect(fetch).toHaveBeenCalledWith(`https://api.github.com/users/${username}`);
+			expect(fetch).toHaveBeenCalled();
+		});
+	});
+
+	describe('fetchEvents', () => {
+		it('fetches the public github events', async () => {
+			global.fetch = jest.fn().mockResolvedValue({ json: () => ['event'] });
+
+			expect(await fetchEvents()).toContain('event');
+			expect(fetch).toHaveBeenCalledWith(`https://api.github.com/users/${username}/events/public?per_page=100`);
+		});
+	});
+
+	describe('AsyncEvents', () => {
+		it('fetches the public github events with react async', async () => {
+			const promise = Promise.resolve({ json: () => ['event'] });
+
+			global.fetch = jest.fn(() => promise);
+
+			const component = mount(
+				<AsyncEvents>
+					{state => (state.data && state.data[0]) || null}
+				</AsyncEvents>
+			);
+
+			expect(component).toBeEmptyRender();
+
+			await promise;
+
+			expect(component).toIncludeText('event');
+			expect(fetch).toHaveBeenCalled();
 		});
 	});
 });
