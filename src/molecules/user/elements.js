@@ -33,7 +33,9 @@ export const UserContainerInfo = styled.div`
  * It's because this is the primary visual symbol of the user itself.
  */
 export const UserAvatar = styled.div`
-	padding: 0.5rem;
+	border-radius: 50%;
+	box-shadow: 0 12px 16px -8px rgba(0, 0, 0, 0.1);
+	margin: 0.5rem;
 	font-size: 1.5em;
 `;
 
