@@ -9,6 +9,7 @@ os:
 cache: npm
 script:
   - npx commitlint-travis
+  - npx tsc
   - npx stylelint './src/**/*.js'
   - npx eslint ./src
   - npx react-scripts test --coverage
