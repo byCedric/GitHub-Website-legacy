@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from 'src/atoms/avatar';
 import Highlight from 'src/atoms/highlight';
-import { propTypes, defaultProps } from './prop-type';
+import { Props, defaultProps } from './props';
 import UserMeta from './user-meta';
 import {
 	UserContainer,
@@ -12,7 +12,7 @@ import {
 	UserDescription,
 } from './elements';
 
-export default function UserMolecule(props) {
+export default function UserMolecule(props: Props) {
 	const identifier = `${props.name} (${props.username})`;
 
 	return (
@@ -32,8 +32,8 @@ export default function UserMolecule(props) {
 			</UserContainerMeta>
 			<UserContainerInfo>
 				<UserDescription>
-					<Highlight decorators={props.highlights}>
-						{props.description}
+					<Highlight decorators={props.highlights!}>
+						{props.description!}
 					</Highlight>
 				</UserDescription>
 			</UserContainerInfo>
@@ -41,5 +41,4 @@ export default function UserMolecule(props) {
 	);
 }
 
-UserMolecule.propTypes = propTypes;
 UserMolecule.defaultProps = defaultProps;

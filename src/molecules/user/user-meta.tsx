@@ -1,9 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { findKeywords } from 'src/providers/github';
-import { propTypes, defaultProps } from './prop-type';
+import { Props, defaultProps } from './props';
 
-export default function UserMoleculeMeta(props) {
+export default function UserMoleculeMeta(props: Props) {
 	const title = props.description
 		? `${props.name} (${props.username}) - ${props.description}`
 		: `${props.name} (${props.username})`;
@@ -31,5 +31,4 @@ export default function UserMoleculeMeta(props) {
 	);
 }
 
-UserMoleculeMeta.propTypes = propTypes;
 UserMoleculeMeta.defaultProps = defaultProps;

@@ -1,17 +1,17 @@
-import PropTypes from 'prop-types';
+import { Decorators } from 'src/atoms/highlight';
 
-export const propTypes = {
+export interface Props {
 	/** The full name of the person who is displayed. */
-	name: PropTypes.string.isRequired,
+	name: string;
 	/** The username of the person who is displayed. */
-	username: PropTypes.string.isRequired,
+	username: string;
 	/** The absolute URL of the person's avatar.  */
-	avatarUrl: PropTypes.string.isRequired,
+	avatarUrl: string;
 	/** An optional description of this person. */
-	description: PropTypes.string,
+	description?: string;
 	/** An optional object with all decorators for user's description highlights. */
-	highlights: PropTypes.object,
-};
+	highlights?: Decorators;
+}
 
 export const defaultProps = {
 	description: '',
