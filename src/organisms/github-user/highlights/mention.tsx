@@ -1,8 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Decorators } from 'src/atoms/highlight';
 import { GithubUserMentionHighlight } from '../elements';
 
-export default function GithubUserOrganismMention(props) {
+interface Props {
+	/** The text to show for this link or mention. */
+	label: string;
+	/** The GitHub username to use in the external link. */
+	username: string;
+}
+
+export default function GithubUserOrganismMention(props: Props) {
 	return (
 		<GithubUserMentionHighlight
 			href={`https://github.com/${props.username}`}
@@ -22,11 +29,4 @@ GithubUserOrganismMention.decorator = {
 			username={text}
 		/>
 	),
-};
-
-GithubUserOrganismMention.propTypes = {
-	/** The text to show for this link or mention.  */
-	label: PropTypes.string.isRequired,
-	/** The GitHub username to use in the external link. */
-	username: PropTypes.string.isRequired,
-};
+} as Decorators;

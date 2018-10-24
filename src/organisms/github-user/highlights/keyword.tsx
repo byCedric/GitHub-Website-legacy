@@ -1,8 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Decorators } from 'src/atoms/highlight';
 import { GithubUserKeywordHighlight } from '../elements';
 
-export default function GithubUserOrganismKeyword(props) {
+interface Props {
+	/** The text to show for this keyword.  */
+	label: string;
+}
+
+export default function GithubUserOrganismKeyword(props: Props) {
 	return (
 		<GithubUserKeywordHighlight>
 			{props.label}
@@ -12,9 +17,4 @@ export default function GithubUserOrganismKeyword(props) {
 
 GithubUserOrganismKeyword.decorator = {
 	'#': (match, text, key) => <GithubUserOrganismKeyword key={key} label={text} />,
-}
-
-GithubUserOrganismKeyword.propTypes = {
-	/** The text to show for this keyword.  */
-	label: PropTypes.string.isRequired,
-};
+} as Decorators;
