@@ -45,7 +45,7 @@ let events = [];
  * @see    https://developer.github.com/v3/activity/events/
  * @return {Promise}
  */
-export const fetchEvents = async (props) => {
+export const fetchEvents = async (props = {}) => {
 	const page = props.page || 1;
 	const perPage = props.perPage || 50;
 	const data = (

@@ -77,8 +77,8 @@ describe('providers/github', () => {
 		it('fetches the public github events', async () => {
 			global.fetch = jest.fn().mockResolvedValue({ json: () => ['event'] });
 
-			expect(await fetchEvents()).toContain('event');
-			expect(fetch).toHaveBeenCalledWith(`https://api.github.com/users/${username}/events/public?per_page=100`);
+			expect((await fetchEvents()).events).toContain('event');
+			expect(fetch).toHaveBeenCalledWith(`https://api.github.com/users/${username}/events/public?per_page=50&page=1`);
 		});
 	});
 
@@ -90,7 +90,7 @@ describe('providers/github', () => {
 
 			const component = mount(
 				<AsyncEvents>
-					{state => (state.data && state.data[0]) || null}
+					{state => (state.data && state.data.events[0]) || null}
 				</AsyncEvents>
 			);
 
