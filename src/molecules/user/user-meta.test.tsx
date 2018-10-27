@@ -1,7 +1,19 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Helmet from 'react-helmet';
+import Helmet, { HelmetData } from 'react-helmet';
 import UserMeta from './user-meta';
+
+interface HelmetPeek extends HelmetData {
+	metaTags: {
+		name?: string;
+		content?: string;
+		property?: string;
+	}[];
+}
+
+// unfortunately the current typing of helmet returns a faulty `HelmetData` object,
+// this fixes it by adding the actual `metaTags` array.
+const debugHelmet = () => Helmet.peek() as HelmetPeek;
 
 describe('molecules/user/user-meta', () => {
 	it('renders correct title and keywords', () => {
@@ -13,7 +25,7 @@ describe('molecules/user/user-meta', () => {
 			/>
 		);
 
-		const peek = Helmet.peek();
+		const peek = debugHelmet();
 
 		expect(peek.title).toBe('Cedric van Putten (byCedric)');
 		expect(peek.metaTags)
@@ -31,7 +43,7 @@ describe('molecules/user/user-meta', () => {
 			/>
 		);
 
-		const peek = Helmet.peek();
+		const peek = debugHelmet();
 
 		expect(peek.title).toBe('Cedric van Putten (byCedric) - Lead developer @Peakfijn.');
 		expect(peek.metaTags)
@@ -49,7 +61,7 @@ describe('molecules/user/user-meta', () => {
 			/>
 		);
 
-		expect(Helmet.peek().metaTags)
+		expect(debugHelmet().metaTags)
 			.toContainEqual({ property: 'og:title', content: 'Cedric van Putten (byCedric) - Lead developer @Peakfijn.' })
 			.toContainEqual({ property: 'og:description', content: 'Lead developer @Peakfijn.' })
 			.toContainEqual({ property: 'og:image', content: 'https://github.com/bycedric.png?size=240' });
@@ -64,7 +76,7 @@ describe('molecules/user/user-meta', () => {
 			/>
 		);
 
-		expect(Helmet.peek().metaTags)
+		expect(debugHelmet().metaTags)
 			.toContainEqual({ property: 'profile:username', content: 'byCedric' })
 			.toContainEqual({ property: 'profile:first_name', content: 'Cedric' })
 			.toContainEqual({ property: 'profile:last_name', content: 'van Putten' });
