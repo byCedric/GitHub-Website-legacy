@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { Decorators } from './decorator';
 import Highlight from './highlight';
 
 describe('atoms/highlight/highlight', () => {
@@ -41,7 +42,7 @@ describe('atoms/highlight/highlight', () => {
 
 	it('renders paragraph with elements with decorator matches', () => {
 		const text = 'This is my #text with @decorators.';
-		const decorators = {
+		const decorators: Decorators = {
 			'@': (text, _, key) => <a key={key} href='#'>{text}</a>,
 		};
 
