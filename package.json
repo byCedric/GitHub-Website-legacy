@@ -32,7 +32,7 @@
 		"jest-chain": "^1.0.4",
 		"jest-enzyme": "^7.0.0",
 		"now": "^11.4.6",
-		"react-scripts": "2.0.5",
+		"react-scripts": "2.1.0",
 		"release-rules-peakfijn": "^0.8.0",
 		"semantic-release": "^15.9.16",
 		"semantic-release-git-branches": "^1.2.1",
