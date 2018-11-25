@@ -24,3 +24,10 @@ deploy:
       node: 11
       branch: develop
       condition: $TRAVIS_OS_NAME = linux
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release
+    on:
+      node: 11
+      branch: master
+      condition: $TRAVIS_OS_NAME = linux
