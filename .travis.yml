@@ -15,3 +15,11 @@ script:
   - npx react-scripts test --coverage
 after_success:
   - npx codecov
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release --dry-run --branch develop
+    on:
+      node: 11
+      branch: develop
+      condition: $TRAVIS_OS_NAME = linux
