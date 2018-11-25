@@ -11,7 +11,8 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"now-build": "react-scripts build && mv build dist"
 	},
 	"dependencies": {
 		"prop-types": "^15.6.2",
@@ -31,7 +32,6 @@
 		"enzyme-adapter-react-16": "^1.6.0",
 		"jest-chain": "^1.0.4",
 		"jest-enzyme": "^7.0.0",
-		"now": "^12.0.0",
 		"react-scripts": "^2.1.0",
 		"release-rules-peakfijn": "^0.8.0",
 		"semantic-release": "^15.9.16",
@@ -56,7 +56,11 @@
 	"commitlint": {
 		"extends": [
 			"@peakfijn/config-commitlint"
-		]
+		],
+		"rules": {
+			"scope-empty": [0],
+			"scope-enum": [2, "always", ["package"]]
+		}
 	},
 	"eslintConfig": {
 		"extends": "react-app",
