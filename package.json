@@ -56,7 +56,11 @@
 	"commitlint": {
 		"extends": [
 			"@peakfijn/config-commitlint"
-		]
+		],
+		"rules": {
+			"scope-empty": [0],
+			"scope-enum": [2, "always", ["package"]]
+		}
 	},
 	"eslintConfig": {
 		"extends": "react-app",
