@@ -1,11 +1,17 @@
 {
-	"type": "docker",
-	"features": {
-		"cloud": "v2"
-	},
+	"version": 2,
+	"name": "github-website",
+	"builds": [
+		{ "src": "package.json", "use": "@now/static-build" }
+	],
+	"routes": [
+		{ "src": "^/static/(.*)", "dest": "/static/$1" },
+		{ "src": ".*", "dest": "/index.html" }
+	],
 	"build": {
-		"env": [
-			"GITHUB_USERNAME"
-		]
+		"env": {
+			"NODE_PATH": "./",
+			"REACT_APP_GITHUB_USERNAME": "byCedric"
+		}
 	}
 }
