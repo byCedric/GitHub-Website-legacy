@@ -1,19 +1,33 @@
 ---
 language: node_js
 node_js:
-  - node
+  - 11
+  - 10
+  - 8
 os:
   - linux
   - osx
-cache:
-  directories:
-    - node_modules
-install:
-  - npm install
+cache: npm
 script:
   - npx commitlint-travis
   - npx stylelint './src/**/*.js'
   - npx eslint ./src
   - npx react-scripts test --coverage
+  - npm audit
 after_success:
   - npx codecov
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release --dry-run --branch develop
+    on:
+      node: 11
+      branch: develop
+      condition: $TRAVIS_OS_NAME = linux
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release
+    on:
+      node: 11
+      branch: master
+      condition: $TRAVIS_OS_NAME = linux
