@@ -13,6 +13,7 @@ script:
   - npx stylelint './src/**/*.js'
   - npx eslint ./src
   - npx react-scripts test --coverage
+  - npm audit
 after_success:
   - npx codecov
 deploy:
