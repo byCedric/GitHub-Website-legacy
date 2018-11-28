@@ -12,6 +12,9 @@ Let your work speak for itself, have a simple site shows your GitHub feed!
 
 ## Getting started
 
+> The getting started guide is currently unsupported, due to the recent Now v2 changes.
+> Stay tuned for updates on how to get started.
+
 Starting an instance special tailored for you is not that hard.
 It's done by running a single CLI/[Now](https://now.sh) command!
 
