@@ -1,3 +1,43 @@
+# [0.4.0](https://github.com/bycedric/github-website/compare/0.3.1...0.4.0) (2018-12-01)
+
+
+### Code refactors
+
+* move user description highlights to github user organism ([#68](https://github.com/bycedric/github-website/issues/68)) ([2575cec](https://github.com/bycedric/github-website/commit/2575cec))
+* remove superseded github mentions ([#84](https://github.com/bycedric/github-website/issues/84)) ([5e9e513](https://github.com/bycedric/github-website/commit/5e9e513))
+* upgrade now to version 12.0.0 ([#74](https://github.com/bycedric/github-website/issues/74)) ([3878702](https://github.com/bycedric/github-website/commit/3878702))
+* upgrade react-scripts to version 2.1.0 ([#73](https://github.com/bycedric/github-website/issues/73)) ([74e8974](https://github.com/bycedric/github-website/commit/74e8974))
+* user molecule layout to allow other content ([#63](https://github.com/bycedric/github-website/issues/63)) ([d1ad708](https://github.com/bycedric/github-website/commit/d1ad708))
+
+
+### Documentation changes
+
+* add notice about deployments with now v2 ([#83](https://github.com/bycedric/github-website/issues/83)) ([167a5f3](https://github.com/bycedric/github-website/commit/167a5f3))
+
+
+### New features
+
+* implement mention link in user molecule ([#65](https://github.com/bycedric/github-website/issues/65)) ([0a0cb92](https://github.com/bycedric/github-website/commit/0a0cb92))
+* prototype github mentions support as a component ([#56](https://github.com/bycedric/github-website/issues/56)) ([1788b32](https://github.com/bycedric/github-website/commit/1788b32))
+* upgrade to now version 2 ([#79](https://github.com/bycedric/github-website/issues/79)) ([f97f7ab](https://github.com/bycedric/github-website/commit/f97f7ab))
+
+
+### Pipeline changes
+
+* escape stylelint file glob ([#64](https://github.com/bycedric/github-website/issues/64)) ([0cc473f](https://github.com/bycedric/github-website/commit/0cc473f))
+* limit node versions because of unexpected fetch behaviour ([#82](https://github.com/bycedric/github-website/issues/82)) ([eb50a5f](https://github.com/bycedric/github-website/commit/eb50a5f))
+* test full build in travis to detect feature issues with cra ([#85](https://github.com/bycedric/github-website/issues/85)) ([5592f94](https://github.com/bycedric/github-website/commit/5592f94))
+* upgrade travis with auto-release and security checks ([#81](https://github.com/bycedric/github-website/issues/81)) ([da79f78](https://github.com/bycedric/github-website/commit/da79f78))
+
+
+### Testing updates
+
+* add extra tests to atom components ([#67](https://github.com/bycedric/github-website/issues/67)) ([41d746c](https://github.com/bycedric/github-website/commit/41d746c))
+* add extra tests to github provider ([#66](https://github.com/bycedric/github-website/issues/66)) ([14d6efa](https://github.com/bycedric/github-website/commit/14d6efa))
+* add unit tests for github user organism ([#70](https://github.com/bycedric/github-website/issues/70)) ([4023dc1](https://github.com/bycedric/github-website/commit/4023dc1))
+* add unit tests for user molecule ([#69](https://github.com/bycedric/github-website/issues/69)) ([84eb513](https://github.com/bycedric/github-website/commit/84eb513))
+* clean up dirty tests and add app page component test ([#71](https://github.com/bycedric/github-website/issues/71)) ([addb123](https://github.com/bycedric/github-website/commit/addb123))
+
 ## [0.3.1](https://github.com/bycedric/github-website/compare/0.3.0...0.3.1) (2018-10-18)
 
 
