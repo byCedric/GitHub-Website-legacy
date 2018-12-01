@@ -1,36 +1,35 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { findMentions } from 'src/providers/github';
+import { findKeywords } from 'src/providers/github';
+import { propTypes, defaultProps } from './prop-type';
 
 export default function UserMoleculeMeta(props) {
 	const title = props.description
-		? `${props.title} – ${props.description}`
-		: props.title;
+		? `${props.name} (${props.username}) - ${props.description}`
+		: `${props.name} (${props.username})`;
 
 	const keywords = props.description
-		? props.keywords.concat(findMentions(props.description))
-		: props.keywords;
+		? [props.name, props.username].concat(findKeywords(props.description))
+		: [props.name, props.username];
+
+	const nameSegments = props.name.split(' ');
+	const nameFirst = nameSegments.shift();
+	const nameLast = nameSegments.join(' ');
 
 	return (
 		<Helmet>
 			<title>{title}</title>
 			<meta name="description" content={props.description} />
 			<meta name="keywords" content={keywords.join(', ')} />
+			<meta property="og:title" content={title} />
+			<meta property="og:description" content={props.description} />
+			<meta property="og:image" content={`${props.avatarUrl}?size=240`} />
+			<meta property="profile:username" content={props.username} />
+			<meta property="profile:first_name" content={nameFirst} />
+			<meta property="profile:last_name" content={nameLast} />
 		</Helmet>
 	);
 }
 
-UserMoleculeMeta.propTypes = {
-	/** The full page title to use. */
-	title: PropTypes.string.isRequired,
-	/** A list of all keywords of this person, in relevant order. */
-	keywords: PropTypes.arrayOf(PropTypes.string),
-	/** An optional description of this person. */
-	description: PropTypes.string,
-};
-
-UserMoleculeMeta.defaultProps = {
-	keywords: [],
-	description: '',
-};
+UserMoleculeMeta.propTypes = propTypes;
+UserMoleculeMeta.defaultProps = defaultProps;

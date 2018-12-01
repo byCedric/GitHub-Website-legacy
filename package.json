@@ -1,6 +1,6 @@
 {
 	"name": "@bycedric/github-website",
-	"version": "0.2.1",
+	"version": "0.3.1",
 	"license": "MIT",
 	"private": true,
 	"repository": {
@@ -11,7 +11,8 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"now-build": "react-scripts build && mv build dist"
 	},
 	"dependencies": {
 		"prop-types": "^15.6.2",
@@ -27,8 +28,11 @@
 		"@semantic-release/changelog": "^3.0.0",
 		"codecov": "^3.1.0",
 		"conventional-changelog-peakfijn": "^0.8.0",
-		"now": "^11.4.6",
-		"react-scripts": "2.0.5",
+		"enzyme": "^3.7.0",
+		"enzyme-adapter-react-16": "^1.6.0",
+		"jest-chain": "^1.0.4",
+		"jest-enzyme": "^7.0.0",
+		"react-scripts": "^2.1.0",
 		"release-rules-peakfijn": "^0.8.0",
 		"semantic-release": "^15.9.16",
 		"semantic-release-git-branches": "^1.2.1",
@@ -44,10 +48,19 @@
 		"not ie <= 11",
 		"not op_mini all"
 	],
+	"babelMacros": {
+		"styledComponents": {
+			"fileName": false
+		}
+	},
 	"commitlint": {
 		"extends": [
 			"@peakfijn/config-commitlint"
-		]
+		],
+		"rules": {
+			"scope-empty": [0],
+			"scope-enum": [2, "always", ["package"]]
+		}
 	},
 	"eslintConfig": {
 		"extends": "react-app",

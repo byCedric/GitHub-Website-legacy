@@ -10,6 +10,28 @@ Let your work speak for itself, have a simple site shows your GitHub feed!
 [![Code Climate grade](https://img.shields.io/codeclimate/maintainability/byCedric/GitHub-Website.svg?style=flat-square)](https://codeclimate.com/github/byCedric/GitHub-Website)
 [![Greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
 
+## Getting started
+
+> The getting started guide is currently unsupported, due to the recent Now v2 changes.
+> Stay tuned for updates on how to get started.
+
+Starting an instance special tailored for you is not that hard.
+It's done by running a single CLI/[Now](https://now.sh) command!
+
+```bash
+$ now bycedric/github-website
+```
+
+This command will ask for your GitHub username and will build the project automatically.
+It might take a couple of minutes before everything is deployed and ready for use.
+In case you want to automate the deployments, you can define the username in the command itself.
+
+```bash
+$ now bycedric/github-website --build-env GITHUB_USERNAME=byCedric
+```
+
+> Read more about [Now build arguments here](https://zeit.co/blog/build-env).
+
 ## Contributing
 
 Contributions are always welcome.

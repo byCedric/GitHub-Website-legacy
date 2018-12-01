@@ -1,47 +1,32 @@
 ---
 language: node_js
 node_js:
-  - node
-  - lts/*
-
+  - 11
+  - 10
 os:
   - linux
   - osx
-
-cache:
-  directories:
-    - node_modules
-
-install:
-  - npm install
-
+cache: npm
 script:
   - npx commitlint-travis
-  - npx stylelint ./src/**/*.js
+  - npx stylelint './src/**/*.js'
   - npx eslint ./src
   - npx react-scripts test --coverage
-  - npm run build
-
+  - npm audit
 after_success:
   - npx codecov
-
 deploy:
   - provider: script
     skip_cleanup: true
-    script: >-
-      npx semantic-release --dry-run --branch develop &&
-      npm run build &&
-      cp now.staging.json now.json &&
-      npx now deploy --token=$NOW_TOKEN --team=personal --name=bycedric-website-staging --regions=bru ./build &&
-      npx now alias --token=$NOW_TOKEN --team=personal
+    script: npx semantic-release --dry-run --branch develop
     on:
-      condition: $TRAVIS_OS_NAME = linux
+      node: 11
       branch: develop
-      node: lts/*
+      condition: $TRAVIS_OS_NAME = linux
   - provider: script
     skip_cleanup: true
     script: npx semantic-release
     on:
-      condition: $TRAVIS_OS_NAME = linux
+      node: 11
       branch: master
-      node: lts/*
+      condition: $TRAVIS_OS_NAME = linux
