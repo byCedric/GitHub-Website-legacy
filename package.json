@@ -37,7 +37,7 @@
 		"enzyme-adapter-react-16": "^1.6.0",
 		"jest-chain": "^1.0.4",
 		"jest-enzyme": "^7.0.0",
-		"react-scripts": "^2.1.0",
+		"react-scripts": "2.0.6-next.c662dfb0",
 		"release-rules-peakfijn": "^0.8.0",
 		"semantic-release": "^15.9.16",
 		"semantic-release-git-branches": "^1.2.1",
