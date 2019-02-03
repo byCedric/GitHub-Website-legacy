@@ -29,7 +29,7 @@
 		"@peakfijn/config-stylelint": "^1.0.0-rc.3",
 		"codecov": "^3.1.0",
 		"enzyme": "^3.8.0",
-		"enzyme-adapter-react-16": "^1.7.0",
+		"enzyme-adapter-react-16": "^1.8.0",
 		"jest-chain": "^1.1.2",
 		"jest-enzyme": "^7.0.0",
 		"react-scripts": "^2.1.3",
