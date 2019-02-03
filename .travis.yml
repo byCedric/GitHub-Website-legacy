@@ -8,12 +8,12 @@ os:
   - osx
 cache: npm
 script:
+  - npm audit
   - npx commitlint-travis
   - npx stylelint './src/**/*.js'
   - npx eslint ./src
   - npx react-scripts test --coverage
-  - npm run build
-  - npm audit
+  - npx react-scripts build
 after_success:
   - npx codecov
 deploy:
@@ -26,7 +26,7 @@ deploy:
       condition: $TRAVIS_OS_NAME = linux
   - provider: script
     skip_cleanup: true
-    script: npx semantic-release
+    script: npx semantic-release --branch master
     on:
       node: 11
       branch: master
