@@ -42,7 +42,7 @@ describe('atoms/highlight/highlight', () => {
 	it('renders paragraph with elements with decorator matches', () => {
 		const text = 'This is my #text with @decorators.';
 		const decorators = {
-			'@': (text, _, key) => <a key={key} href='#'>{text}</a>,
+			'@': (text, _, key) => <a key={key} href='https://bycedric.com'>{text}</a>,
 		};
 
 		const component = mount(
@@ -58,6 +58,6 @@ describe('atoms/highlight/highlight', () => {
 		expect(component.find('a'))
 			.toExist()
 			.toHaveText('@decorators')
-			.toMatchSelector('[href="#"]');
+			.toMatchSelector('[href="https://bycedric.com"]');
 	});
 });
