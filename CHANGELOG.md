@@ -1,3 +1,21 @@
+## [0.4.1](https://github.com/bycedric/github-website/compare/0.4.0...0.4.1) (2019-02-04)
+
+
+### Bug fixes
+
+* origin validation issue in react-scripts ([#88](https://github.com/bycedric/github-website/issues/88)) ([c7aacb7](https://github.com/bycedric/github-website/commit/c7aacb7))
+
+
+### Code refactors
+
+* upgrade all dependencies ([#90](https://github.com/bycedric/github-website/issues/90)) ([5929577](https://github.com/bycedric/github-website/commit/5929577))
+* upgrade all missed dependencies ([#91](https://github.com/bycedric/github-website/issues/91)) ([3468072](https://github.com/bycedric/github-website/commit/3468072))
+
+
+### Other chores
+
+* rebuild lock file from scratch ([#92](https://github.com/bycedric/github-website/issues/92)) ([ab66d29](https://github.com/bycedric/github-website/commit/ab66d29))
+
 # [0.4.0](https://github.com/bycedric/github-website/compare/0.3.1...0.4.0) (2018-12-01)
 
 
