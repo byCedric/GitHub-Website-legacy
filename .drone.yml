@@ -10,10 +10,14 @@ steps:
   - name: lint
     image: node:10-alpine
     commands:
+      - npx commitlint --from develop --to $DRONE_COMMIT
       - npx stylelint './src/**/*.js'
       - npx eslint ./src
   - name: test
     image: node:10-alpine
     commands:
       - npx react-scripts test --coverage
+  - name: build
+    image: node:10-alpine
+    commands:
       - npx react-scripts build
