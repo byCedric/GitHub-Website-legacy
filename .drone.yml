@@ -10,8 +10,6 @@ steps:
   - name: lint
     image: bycedric/ci-node
     commands:
-      - git fetch
-      - npx commitlint --from develop --to HEAD
       - npx stylelint './src/**/*.js'
       - npx eslint ./src
   - name: test
