@@ -10,7 +10,7 @@ steps:
   - name: lint
     image: bycedric/ci-node
     commands:
-      - npx commitlint --from develop --to $DRONE_COMMIT
+      - npx commitlint --to HEAD
       - npx stylelint './src/**/*.js'
       - npx eslint ./src
   - name: test
