@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: default
+name: Install test and build
 steps:
   - name: install
     image: node:10-alpine
