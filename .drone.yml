@@ -1,0 +1,19 @@
+---
+kind: pipeline
+name: default
+steps:
+  - name: install
+    image: node:10-alpine
+    commands:
+      - npm audit
+      - npm ci
+  - name: lint
+    image: node:10-alpine
+    commands:
+      - npx stylelint './src/**/*.js'
+      - npx eslint ./src
+  - name: test
+    image: node:10-alpine
+    commands:
+      - npx react-scripts test --coverage
+      - npx react-scripts build
