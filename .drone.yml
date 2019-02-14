@@ -14,8 +14,12 @@ steps:
       - npx eslint ./src
   - name: test
     image: bycedric/ci-node
+    environment:
+      CODECOV_TOKEN:
+        from_secret: codecov
     commands:
       - npx react-scripts test --coverage
+      - npx codecov
   - name: build
     image: bycedric/ci-node
     commands:
