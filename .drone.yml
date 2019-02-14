@@ -1,0 +1,26 @@
+---
+kind: pipeline
+name: Install test and build
+steps:
+  - name: install
+    image: bycedric/ci-node
+    commands:
+      - npm audit
+      - npm ci
+  - name: lint
+    image: bycedric/ci-node
+    commands:
+      - npx stylelint './src/**/*.js'
+      - npx eslint ./src
+  - name: test
+    image: bycedric/ci-node
+    environment:
+      CODECOV_TOKEN:
+        from_secret: codecov
+    commands:
+      - npx react-scripts test --coverage
+      - npx codecov
+  - name: build
+    image: bycedric/ci-node
+    commands:
+      - npx react-scripts build
