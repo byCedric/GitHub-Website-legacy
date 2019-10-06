@@ -3,6 +3,7 @@ module.exports = {
 	plugins: [
 		'@typescript-eslint',
 		'react-hooks',
+		'jest',
 	],
 	extends: [
 		'eslint:recommended',
@@ -10,7 +11,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 	],
 	env: {
-		'node': true,
+		node: true,
+		'jest/globals': true,
 	},
 	settings: {
 		react: {

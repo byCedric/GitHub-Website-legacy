@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 const links = [
 	{ href: 'https://zeit.co/now', label: 'ZEIT', key: 'link-zeit' },
-	{ href: 'https://github.com/zeit/next.js', label: 'GitHub', key: 'link-zeit' }
+	{ href: 'https://github.com/zeit/next.js', label: 'GitHub', key: 'link-github' },
 ];
 
-const Nav = () => (
+const Nav: React.SFC = () => (
 	<nav>
 		<ul>
 			<li>
