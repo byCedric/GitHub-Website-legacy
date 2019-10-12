@@ -17,8 +17,9 @@
 
 # misc
 .DS_Store
-.env*
 .vscode
+.env*
+!.env.example
 
 # debug
 npm-debug.log*
