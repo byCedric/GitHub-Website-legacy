@@ -4,7 +4,10 @@ module.exports = {
 	experimental: {
 		publicDirectory: true,
 	},
-	env: {
-		GITHUB_USERNAME: process.env.GITHUB_USERNAME,
+	serverRuntimeConfig: {
+		githubToken: process.env.GITHUB_TOKEN,
+	},
+	publicRuntimeConfig: {
+		githubLogin: process.env.GITHUB_LOGIN,
 	},
 };

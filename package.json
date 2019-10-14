@@ -10,9 +10,17 @@
 		"serve": "next start"
 	},
 	"dependencies": {
+		"@apollo/react-hooks": "^3.1.2",
 		"@primer/components": "^14.3.1",
+		"apollo-cache-inmemory": "^1.6.3",
+		"apollo-client": "^2.6.4",
+		"apollo-link-http": "^1.5.16",
 		"dotenv": "^8.1.0",
+		"graphql": "^14.5.8",
+		"graphql-tag": "^2.10.1",
+		"isomorphic-unfetch": "^3.0.0",
 		"next": "^9.1.1",
+		"next-with-apollo": "^4.3.0",
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
 		"styled-components": "^4.4.0"
@@ -23,7 +31,7 @@
 		"@types/jest": "^24.0.18",
 		"@types/node": "^12.7.11",
 		"@types/react": "^16.9.5",
-		"@types/react-dom": "^16.9.1",
+		"@types/react-dom": "^16.9.2",
 		"@typescript-eslint/eslint-plugin": "^2.3.3",
 		"@typescript-eslint/parser": "^2.3.3",
 		"babel-jest": "^24.9.0",
