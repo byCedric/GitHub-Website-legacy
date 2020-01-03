@@ -3,7 +3,7 @@
 		"name": "GitHub Website",
 		"slug": "github-website",
 		"privacy": "unlisted",
-		"version": "1.0.0",
+		"version": "0.0.0",
 		"sdkVersion": "36.0.0",
 		"platforms": [
 			"web"
