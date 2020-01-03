@@ -1,10 +1,11 @@
 module.exports = {
-	presets: ['next/babel'],
+	presets: ['@expo/next-adapter/babel'],
 	plugins: [
-		'@babel/plugin-proposal-optional-chaining',
 		['module-resolver', {
 			root: ['.'],
-			alias: { src: './src' },
+			alias: {
+				src: './src',
+			},
 		}],
 		['styled-components', {
 			ssr: true,

@@ -1,54 +1,45 @@
 import React from 'react';
-import getConfig from 'next/config';
-import { gql, useQuery } from 'src/providers/apollo';
+import { logins, links } from 'src/providers/config';
+import { Flex } from 'src/atoms/layout';
+import { Heading, Paragraph, Link } from 'src/atoms/typography';
+import { Icon } from 'src/atoms/icon';
+import { GithubAvatar, GithubMeta, useGithubUserQuery } from 'src/molecules/github-user';
 
-const QUERY = gql`
-	query user($login: String!) {
-		user(login: $login) {
-			name
-			bioHTML
-			url
-			avatarUrl
-		}
-	}
-`;
+const HomePage: React.FC = () => {
+	const query = useGithubUserQuery({
+		variables: { login: logins.github },
+	});
 
-const getLogin = () => getConfig().publicRuntimeConfig.githubLogin;
-
-const HomePage: React.SFC = () => {
-	const query = useQuery(QUERY, { variables: { login: getLogin() } });
-
-	if (query.loading || !query.data) {
+	if (query.loading) {
 		return null;
 	}
 
 	return (
-		<Box padding={4}>
-			<Flex
-				minHeight='50vh'
-				flexDirection='column'
-				alignItems='center'
-				justifyContent='flex-end'
-			>
-				<Avatar size={90} src={query.data.user.avatarUrl} style={{ borderRadius: '50%' }} />
-				<Box marginTop={2}>
-					<Heading textAlign='center'>{query.data.user.name}</Heading>
-				</Box>
+		<Flex variant='root'>
+			<GithubMeta
+				name={query.data.user.name}
+				bio={query.data.user.bio}
+				login='bycedric'
+			/>
+			<Flex height='50%' justifyContent='flex-end' alignItems='center'>
+				<GithubAvatar login={logins.github} margin={2} />
+				<Heading maxWidth='user' textAlign='center' padding={2}>
+					{query.data.user.name}
+				</Heading>
 			</Flex>
-			<Flex justifyContent='center'>
-				<Box maxWidth='24em'>
-					<Text
-						as='p'
-						lineHeight='1.75'
-						textAlign='center'
-						color='gray.6'
-						dangerouslySetInnerHTML={{
-							__html: String(query.data.user.bioHTML).replace(/<\/?div>/ig, ''),
-						}}
-					/>
-				</Box>
+			<Flex alignItems='center'>
+				<Paragraph textAlign='center' maxWidth='user' padding={2}>
+					{query.data.user.bio}
+				</Paragraph>
+				<Flex flexDirection='row' margin={2}>
+					{links.map(link => (
+						<Link key={link.type} href={link.url} target='_blank'>
+							<Icon name={link.icon} padding={2} />
+						</Link>
+					))}
+				</Flex>
 			</Flex>
-		</Box>
+		</Flex>
 	);
 };
 

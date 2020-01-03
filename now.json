@@ -1,18 +1,10 @@
 {
-	"version": 2,
-	"name": "github-website",
-	"builds": [
-		{ "src": "package.json", "use": "@now/static-build" }
-	],
-	"routes": [
-		{ "src": "^/robots\\.txt", "dest": "/robots.txt" },
-		{ "src": "^/static/(.*)", "dest": "/static/$1" },
-		{ "src": ".*", "dest": "/index.html" }
-	],
 	"build": {
 		"env": {
-			"NODE_PATH": "./",
-			"REACT_APP_GITHUB_USERNAME": "byCedric"
+			"GITHUB_TOKEN": "@ghw-github-token",
+			"GITHUB_LOGIN": "bycedric",
+			"TWITTER_LOGIN": "cedricvanputten",
+			"DEVTO_LOGIN": "bycedric"
 		}
 	}
 }

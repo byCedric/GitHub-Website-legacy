@@ -1,8 +1,8 @@
-import NextDocument from 'next/document';
+import ExpoDocument from '@expo/next-adapter/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
-class Document extends NextDocument {
+class Document extends ExpoDocument {
 	static async getInitialProps(ctx) {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
@@ -10,11 +10,13 @@ class Document extends NextDocument {
 		try {
 			ctx.renderPage = () => (
 				originalRenderPage({
-					enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+					enhanceApp: App => (
+						props => sheet.collectStyles(<App {...props} />)
+					),
 				})
 			);
 
-			const initialProps = await NextDocument.getInitialProps(ctx);
+			const initialProps = await ExpoDocument.getInitialProps(ctx);
 
 			return {
 				...initialProps,

@@ -9,11 +9,16 @@ export type ApolloClient = ApolloClientInstance<InMemoryCache>;
 
 export const withApollo = nextWithApollo(
 	(options) => {
+		const headers = options.headers || {};
+		const scheme = headers['x-forwarded-proto'] || 'http';
+		const host = headers['x-now-deployment-url']
+			|| headers['x-forwarded-host']
+			|| headers.host;
+
 		const ssrMode = !process.browser;
-		const port = process.env.PORT || '3000';
 		const cache = new InMemoryCache();
 		const link = new HttpLink({
-			uri: ssrMode ? `http://localhost:${port}/api/github` : '/api/github',
+			uri: host ? `${scheme}://${host}/api/github` : '/api/github',
 		});
 
 		if (options.initialState) {

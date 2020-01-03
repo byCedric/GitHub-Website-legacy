@@ -1,8 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import fetch from 'isomorphic-unfetch';
-import getConfig from 'next/config';
-
-const getToken = () => getConfig().serverRuntimeConfig.githubToken;
+import { githubToken } from 'src/providers/config';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
 	if (req.method !== 'POST') {
@@ -15,7 +13,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		method: 'POST',
 		body: JSON.stringify(req.body),
 		headers: {
-			Authorization: `bearer ${getToken()}`,
+			Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
 			'Content-Type': 'application/json',
 		},
 	};
