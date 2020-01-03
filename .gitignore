@@ -4,6 +4,7 @@
 .pnp.js
 
 # testing
+/.jest
 /coverage
 
 # next.js
