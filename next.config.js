@@ -1,11 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const dotenv = require('dotenv');
-const dotenvExpand = require('dotenv-expand');
+require('dotenv/config');
 const { withExpo } = require('@expo/next-adapter');
 const withFonts = require('next-fonts');
-
-dotenv.config()
-dotenvExpand(process.env);
 
 const config = {
 	projectRoot: __dirname,
@@ -16,10 +12,6 @@ const config = {
 		TWITTER_LOGIN: process.env.TWITTER_LOGIN,
 		DEVTO_LOGIN: process.env.DEVTO_LOGIN,
 	},
-	// serverRuntimeConfig: {
-	// },
-	// publicRuntimeConfig: {
-	// },
 	typescript: {
 		ignoreDevErrors: true,
 		ignoreBuildErrors: true,

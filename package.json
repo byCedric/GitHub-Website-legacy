@@ -1,6 +1,6 @@
 {
 	"name": "github-website",
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"private": true,
 	"main": "node_modules/expo/AppEntry.js",
 	"scripts": {
@@ -21,7 +21,6 @@
 		"apollo-client": "^2.6.8",
 		"apollo-link-http": "^1.5.16",
 		"dotenv": "^8.2.0",
-		"dotenv-expand": "^5.1.0",
 		"expo": "^36.0.2",
 		"expo-asset": "~8.0.0",
 		"expo-font": "~8.0.0",

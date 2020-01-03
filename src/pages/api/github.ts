@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import fetch from 'isomorphic-unfetch';
-import { githubToken } from 'src/providers/config';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
 	if (req.method !== 'POST') {
@@ -9,16 +8,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		return res.end();
 	}
 
-	const options: fetch.IsomorphicRequest = {
+	// todo: handle request errors
+
+	const response = await fetch('https://api.github.com/graphql', {
 		method: 'POST',
 		body: JSON.stringify(req.body),
 		headers: {
 			Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
 			'Content-Type': 'application/json',
 		},
-	};
+	});
 
-	const response = await fetch('https://api.github.com/graphql', options);
 	const json = await response.json();
 
 	res.status(response.status);

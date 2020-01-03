@@ -11,6 +11,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 	],
 	env: {
+		browser: true,
 		node: true,
 		'jest/globals': true,
 	},

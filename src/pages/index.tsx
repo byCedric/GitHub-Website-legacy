@@ -1,11 +1,12 @@
 import React from 'react';
+import { NextPage } from 'next';
 import { logins, links } from 'src/providers/config';
 import { Flex } from 'src/atoms/layout';
 import { Heading, Paragraph, Link } from 'src/atoms/typography';
 import { Icon } from 'src/atoms/icon';
 import { GithubAvatar, GithubMeta, useGithubUserQuery } from 'src/molecules/github-user';
 
-const HomePage: React.FC = () => {
+const HomePage: NextPage<HomePageProps> = (props) => {
 	const query = useGithubUserQuery({
 		variables: { login: logins.github },
 	});
@@ -17,6 +18,7 @@ const HomePage: React.FC = () => {
 	return (
 		<Flex variant='root'>
 			<GithubMeta
+				url={props.url}
 				name={query.data.user.name}
 				bio={query.data.user.bio}
 				login='bycedric'
@@ -42,5 +44,16 @@ const HomePage: React.FC = () => {
 		</Flex>
 	);
 };
+
+HomePage.getInitialProps = async (ctx) => ({
+	url: typeof window === 'undefined'
+		? ctx.req?.headers?.host
+		: window.location.hostname,
+});
+
+interface HomePageProps {
+	/** The absolute (base) url of the website */
+	url: string;
+}
 
 export default HomePage;
