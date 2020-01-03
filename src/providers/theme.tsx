@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
-import { ThemeProvider as StyledThemeProvider } from 'styled-components/native';
-import { Theme as SystemTheme } from 'styled-system';
+import { ThemeProvider as StyledThemeProvider, ThemeContext as StyledThemeContext } from 'styled-components/native';
+import { Theme as SystemTheme, get as systemGet } from 'styled-system';
+
+export const useTheme = () => useContext(StyledThemeContext);
+
+export const useThemeProp = (prop: string, scale?: string) => {
+	const theme = useTheme();
+	const value = systemGet(theme, prop);
+
+	return scale
+		? systemGet(theme, `${scale}.${value}`, value)
+		: value;
+};
 
 export const ThemeProvider: React.FC = (props) => {
 	const colorScheme = useColorScheme();

@@ -18,7 +18,7 @@ const HomePage: NextPage<HomePageProps> = (props) => {
 	return (
 		<Flex variant='root'>
 			<GithubMeta
-				url={props.url}
+				host={props.host}
 				name={query.data.user.name}
 				bio={query.data.user.bio}
 				login='bycedric'
@@ -46,14 +46,14 @@ const HomePage: NextPage<HomePageProps> = (props) => {
 };
 
 HomePage.getInitialProps = async (ctx) => ({
-	url: typeof window === 'undefined'
+	host: typeof window === 'undefined'
 		? ctx.req?.headers?.host
 		: window.location.hostname,
 });
 
 interface HomePageProps {
-	/** The absolute (base) url of the website */
-	url: string;
+	/** The host (url) of the website */
+	host: string;
 }
 
 export default HomePage;

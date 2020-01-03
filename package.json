@@ -49,6 +49,7 @@
 		"@types/styled-components": "^4.4.1",
 		"@types/styled-system": "^5.1.4",
 		"@types/styled-system__css": "^5.0.4",
+		"@types/styled-system__theme-get": "^5.0.0",
 		"@typescript-eslint/eslint-plugin": "^2.12.0",
 		"@typescript-eslint/parser": "^2.12.0",
 		"babel-jest": "^24.9.0",
