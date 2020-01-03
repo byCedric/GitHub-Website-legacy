@@ -2,16 +2,15 @@ import React from 'react';
 import Head from 'next/head';
 import { useThemeProp } from 'src/providers/theme';
 
-// todo: use proper keywords from bio
-
 export const GithubMeta: React.FC<GithubMetaProps> = (props) => {
 	const color = useThemeProp('layout.root.backgroundColor', 'colors');
+	const keywords = [props.login, props.name, ...getKeywordsFromBio(props.bio)];
 
 	return (
 		<Head>
 			<title>{props.name} ({props.login})</title>
 			<meta name='description' content={props.bio} />
-			<meta name='keywords' content={[props.login, props.name].join(', ')} />
+			<meta name='keywords' content={keywords.join(', ')} />
 			<meta name='theme-color' content={color || '#000000'} />
 			<meta property='og:type' content='profile' />
 			<meta property='og:url' content={`https://${props.host}`} />
@@ -33,4 +32,9 @@ export interface GithubMetaProps {
 	name: string;
 	bio: string;
 	login: string;
+}
+
+function getKeywordsFromBio(bio = '') {
+	const keywords = bio.match(/\B[@#]\w+/ig) || [];
+	return keywords.map(keyword => keyword.substr(1));
 }
