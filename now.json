@@ -1,4 +1,16 @@
 {
+	"version": 2,
+	"name": "github-website",
+	"alias": [
+		"bycedric.com",
+		"bycedric.dev",
+		"cedric.dev",
+		"finest.dev",
+		"dekoningdernederlanden.nl",
+		"tabs.sexy",
+		"spaces.rip",
+		"false.world"
+	],
 	"build": {
 		"env": {
 			"GITHUB_TOKEN": "@ghw-github-token",
