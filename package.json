@@ -42,7 +42,7 @@
 		"react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
 		"react-native-appearance": "^0.3.2",
 		"react-native-web": "^0.12.0-rc.1",
-		"react-native-web-hooks": "^1.0.3",
+		"react-native-web-hooks": "^2.0.1",
 		"styled-components": "^4.4.1",
 		"styled-system": "^5.1.4"
 	},
