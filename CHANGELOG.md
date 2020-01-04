@@ -1,3 +1,27 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.5.0](https://github.com/bycedric/github-website/compare/0.4.1...0.5.0) (2020-01-04)
+
+### ⚠ BREAKING CHANGES
+
+* rewrite everything in nextjs with expo ([#144](https://github.com/bycedric/github-website/issues/144)) ([0e51e15](https://github.com/bycedric/github-website/commit/0e51e154cf59fb7c442792cd7e0df9e4e6dc8f56))
+
+### Features
+
+* add standard version for easy releases ([#146](https://github.com/bycedric/github-website/issues/146)) ([96ccfc8](https://github.com/bycedric/github-website/commit/96ccfc8d90c25b4bf9319afa3299cfcb5e315f72))
+
+### Bug Fixes
+
+* run workflow when master is pushed ([f8a26fe](https://github.com/bycedric/github-website/commit/f8a26feb2bcdc7e5c284d77d812b288e4a089588))
+* use proper links and references ([#145](https://github.com/bycedric/github-website/issues/145)) ([545be74](https://github.com/bycedric/github-website/commit/545be74ec1680f857eced362023138ba69d06e19))
+
+### Code refactors
+
+* rewrite everything in nextjs with expo ([#144](https://github.com/bycedric/github-website/issues/144)) ([0e51e15](https://github.com/bycedric/github-website/commit/0e51e154cf59fb7c442792cd7e0df9e4e6dc8f56))
+
+
 ## [0.4.1](https://github.com/bycedric/github-website/compare/0.4.0...0.4.1) (2019-02-04)
 
 
