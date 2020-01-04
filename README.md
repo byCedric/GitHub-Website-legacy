@@ -7,7 +7,7 @@ Let your work speak for itself, have a simple site shows your GitHub feed!
 [![Latest Release](https://img.shields.io/github/release/byCedric/GitHub-Website/all.svg?style=flat-square)](https://github.com/byCedric/GitHub-Website/releases)
 [![Build Status](https://img.shields.io/github/workflow/status/byCedric/Github-Website/CI/master.svg?style=flat-square)](https://github.com/byCedric/GitHub-Website/actions)
 [![Code Climate grade](https://img.shields.io/codeclimate/maintainability/byCedric/GitHub-Website.svg?style=flat-square)](https://codeclimate.com/github/byCedric/GitHub-Website)
-[![Demo link](https://img.shields.io/badge/demo-web-lightgrey.svg?style=flat-square)](https://bycedric.com)
+[![Demo link](https://img.shields.io/badge/demo-web-lightgrey.svg?style=flat-square)](https://bycedric.com/random)
 
 ## Getting started
 
@@ -50,5 +50,5 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 --- ---
 
 <p align="center">
-    with :heart: <a href="https://bycedric.com" target="_blank">byCedric</a>
+    with :heart: <a href="https://bycedric.com/random" target="_blank">byCedric</a>
 </p>
