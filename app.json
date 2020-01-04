@@ -1,0 +1,25 @@
+{
+	"expo": {
+		"name": "GitHub Website",
+		"slug": "github-website",
+		"privacy": "unlisted",
+		"version": "0.0.0",
+		"sdkVersion": "36.0.0",
+		"platforms": [
+			"web"
+		],
+		"userInterfaceStyle": "automatic",
+		"web": {
+			"build": {
+				"babel": {
+					"include": [
+						"react-native",
+						"styled-components/native",
+						"expo-font",
+						"@use-expo/font"
+					]
+				}
+			}
+		}
+	}
+}
