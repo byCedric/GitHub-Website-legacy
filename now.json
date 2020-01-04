@@ -13,7 +13,7 @@
 	],
 	"build": {
 		"env": {
-			"GITHUB_TOKEN": "@ghw-github-token",
+			"GITHUB_TOKEN": "@github-website-token",
 			"GITHUB_LOGIN": "bycedric",
 			"TWITTER_LOGIN": "cedricvanputten",
 			"DEVTO_LOGIN": "bycedric"
