@@ -1,8 +1,12 @@
 {
 	"version": 2,
 	"name": "github-website",
-	"regions": ["sfo1", "bru"],
+	"regions": [
+		"sfo1",
+		"bru"
+	],
 	"alias": [
+		"bycedric.now.sh",
 		"bycedric.com",
 		"bycedric.dev",
 		"cedric.dev",
@@ -16,5 +20,15 @@
 			"TWITTER_LOGIN": "cedricvanputten",
 			"DEVTO_LOGIN": "bycedric"
 		}
-	}
+	},
+	"routes": [
+		{
+			"src": "/api/(.*)",
+			"dest": "/api/$1",
+			"continue": true,
+			"headers": {
+				"cache-control": "s-maxage=86400"
+			}
+		}
+	]
 }
