@@ -1,5 +1,7 @@
 import { NextPage } from 'next';
-import { alias } from '../../now.json';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { alias } = require('../../now.json');
 
 const RandomDomainPage: NextPage = () => null;
 
