@@ -52,10 +52,10 @@ $ now secret add github-website-token '<TOKEN>'
 
 # 3. deploy the project with the configuration you want
 $ now \
-	-e GITHUB_TOKEN=@github-website-token \
-	-e GITHUB_LOGIN=bycedric
-	-e DEVTO_LOGIN=bycedric
-	-e TWITTER_LOGIN=cedricvanputten
+    -e GITHUB_TOKEN=@github-website-token \
+    -e GITHUB_LOGIN=bycedric
+    -e DEVTO_LOGIN=bycedric
+    -e TWITTER_LOGIN=cedricvanputten
 ```
 
 > Both `DEVTO_LOGIN` and `TWITTER_LOGIN` are optional. If omitted, it removes the link to that platform.
