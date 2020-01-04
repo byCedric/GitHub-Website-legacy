@@ -9,32 +9,61 @@ Let your work speak for itself, have a simple site shows your GitHub feed!
 [![Code Climate grade](https://img.shields.io/codeclimate/maintainability/byCedric/GitHub-Website.svg?style=flat-square)](https://codeclimate.com/github/byCedric/GitHub-Website)
 [![Demo link](https://img.shields.io/badge/demo-web-lightgrey.svg?style=flat-square)](https://bycedric.com)
 
+## What's inside?
+
+This project gives you a self-updating personal website, based on the contributions you do in GitHub.
+Besides GitHub, it also gives your visitors a helpful link to both Twitter and Dev.to accounts (if configured).
+The code is built with [Next](https://github.com/zeit/next.js) and [Expo for Web](https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/).
+
 ## Getting started
 
-> The getting started guide is currently unsupported, due to the recent Now v2 changes.
-> Stay tuned for updates on how to get started.
-
 Starting an instance special tailored for you is not that hard.
-It's done by running a single CLI/[Now](https://now.sh) command!
+You can do that by following these simple steps.
 
 ```bash
-$ now bycedric/github-website
+# 1. clone the repository to a local folder
+$ git clone https://github.com/bycedric/github-website ./my-website
+
+# 2. install the dependencies (you can also npm install)
+$ npm ci
+
+# 3. copy the example env file and change the variables
+$ cp .env.example .env
+
+# 4. start the project in development mode
+$ npm start
+
+# 5. or start the project in production mode
+$ npm run serve
 ```
 
-This command will ask for your GitHub username and will build the project automatically.
-It might take a couple of minutes before everything is deployed and ready for use.
-In case you want to automate the deployments, you can define the username in the command itself.
+## Deploy your site
+
+The easiest way to deploy this project is with [Now](https://now.sh).
+You can customize some settings in `now.json`, or remove the file if you are not sure what to do.
+After that, you can deploy your website with these commands.
 
 ```bash
-$ now bycedric/github-website --build-env GITHUB_USERNAME=byCedric
+# 1. install the now cli
+$ npm i -g now
+
+# 2. store the github token as secret (recommended)
+$ now secret add github-website-token '<TOKEN>'
+
+# 3. deploy the project with the configuration you want
+$ now \
+	-e GITHUB_TOKEN=@github-website-token \
+	-e GITHUB_LOGIN=bycedric
+	-e DEVTO_LOGIN=bycedric
+	-e TWITTER_LOGIN=cedricvanputten
 ```
 
-> Read more about [Now build arguments here](https://zeit.co/blog/build-env).
+> Both `DEVTO_LOGIN` and `TWITTER_LOGIN` are optional. If omitted, it removes the link to that platform.
 
 ## Contributing
 
 Contributions are always welcome.
-This project is open source, and anyone may contribute.
+This project is open-source, and anyone may contribute.
 To keep the project healthy and running smoothly, a couple of rules are defined.
 
 1. Keep it friendly and accessible at all times.
@@ -50,5 +79,5 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 --- ---
 
 <p align="center">
-    with :heart: <a href="https://bycedric.com" target="_blank">byCedric</a>
+ with :heart: <a href="https://bycedric.com" target="_blank">byCedric</a>
 </p>
