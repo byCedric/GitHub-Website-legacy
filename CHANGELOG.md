@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/bycedric/github-website/compare/0.4.1...0.6.0) (2020-01-04)
+
+### Features
+
+* add standard version for easy releases ([#146](https://github.com/bycedric/github-website/issues/146)) ([96ccfc8](https://github.com/bycedric/github-website/commit/96ccfc8d90c25b4bf9319afa3299cfcb5e315f72))
+
+### Bug Fixes
+
+* add brussels as region too ([7bd3f1a](https://github.com/bycedric/github-website/commit/7bd3f1a0a42a65c94809e7d3a074fb5c03b08288))
+* run workflow when master is pushed ([f8a26fe](https://github.com/bycedric/github-website/commit/f8a26feb2bcdc7e5c284d77d812b288e4a089588))
+* use proper links and references ([#145](https://github.com/bycedric/github-website/issues/145)) ([545be74](https://github.com/bycedric/github-website/commit/545be74ec1680f857eced362023138ba69d06e19))
+
+
 ## [0.5.0](https://github.com/bycedric/github-website/compare/0.4.1...0.5.0) (2020-01-04)
 
 ### ⚠ BREAKING CHANGES
