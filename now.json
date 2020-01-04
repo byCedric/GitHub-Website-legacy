@@ -1,15 +1,13 @@
 {
 	"version": 2,
 	"name": "github-website",
+	"regions": ["sfo1", "bru"],
 	"alias": [
 		"bycedric.com",
 		"bycedric.dev",
 		"cedric.dev",
 		"finest.dev",
-		"dekoningdernederlanden.nl",
-		"tabs.sexy",
-		"spaces.rip",
-		"false.world"
+		"dekoningdernederlanden.nl"
 	],
 	"build": {
 		"env": {
