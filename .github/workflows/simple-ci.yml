@@ -10,12 +10,19 @@ on:
 jobs:
   ci:
     name: Install, validate and build
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: [10, 12]
+        os:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm test
       - run: npm run lint

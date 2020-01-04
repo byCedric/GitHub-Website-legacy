@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"clean": "git clean -xdf .expo .jest .next",
-		"test": "jest; echo 'no tests'; exit 0",
+		"test": "echo 'no tests'",
 		"lint": "tsc && eslint src --ext js,ts,tsx",
 		"start": "next dev",
 		"build": "next build",
