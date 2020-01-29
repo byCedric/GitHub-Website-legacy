@@ -1,13 +1,29 @@
-# GitHub Website
-
-As an enthusiastic developer, you might find yourself racing through many projects.
-Keeping your website up to date might become a burden because of this.
-Let your work speak for itself, have a simple site shows your GitHub feed!
-
-[![Latest Release](https://img.shields.io/github/release/byCedric/GitHub-Website/all.svg?style=flat-square)](https://github.com/byCedric/GitHub-Website/releases)
-[![Build Status](https://img.shields.io/github/workflow/status/byCedric/Github-Website/CI/master.svg?style=flat-square)](https://github.com/byCedric/GitHub-Website/actions)
-[![Code Climate grade](https://img.shields.io/codeclimate/maintainability/byCedric/GitHub-Website.svg?style=flat-square)](https://codeclimate.com/github/byCedric/GitHub-Website)
-[![Demo link](https://img.shields.io/badge/demo-web-lightgrey.svg?style=flat-square)](https://bycedric.com)
+<div align="center">
+    <h1>GitHub Website</h1>
+    <p>Let your work speak for itself, have a simple site that shows your GitHub feed!</p>
+    <sup>
+        <a href="https://github.com/bycedric/github-website/releases">
+            <img src="https://img.shields.io/github/release/byCedric/GitHub-Website/all.svg?style=flat-square" alt="releases" />
+        </a>
+        <a href="https://github.com/bycedric/github-website/actions">
+            <img src="https://img.shields.io/github/workflow/status/byCedric/GitHub-Website/CI/master.svg?style=flat-square" alt="builds" />
+        </a>
+		<a href="https://codeclimate.com/github/byCedric/GitHub-Website">
+            <img src="https://img.shields.io/codeclimate/maintainability/byCedric/GitHub-Website.svg?style=flat-square" alt="builds" />
+        </a>
+        <a href="https://bycedric.com">
+            <img src="https://img.shields.io/badge/demo-web-lightgrey.svg?style=flat-square" alt="demo" />
+        </a>
+    </sup>
+    <br />
+    <p align="center">
+        <a href="https://github.com/bycedric/github-Website#getting-started"><b>Usage</b></a>
+		&nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+		<a href="https://github.com/bycedric/github-Website#deploy-your-site"><b>Deploy</b></a>
+        &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+        <a href="https://github.com/byCedric/GitHub-Website/blob/master/CHANGELOG.md"><b>Changelog</b></a>
+    </p>
+</div>
 
 ## What's inside?
 
@@ -60,24 +76,8 @@ $ now \
 
 > Both `DEVTO_LOGIN` and `TWITTER_LOGIN` are optional. If omitted, it removes the link to that platform.
 
-## Contributing
-
-Contributions are always welcome.
-This project is open-source, and anyone may contribute.
-To keep the project healthy and running smoothly, a couple of rules are defined.
-
-1. Keep it friendly and accessible at all times.
-2. Use the templates adequately with the required information.
-3. Make sure the CI passes.
-
-Make something awesome!
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
---- ---
-
-<p align="center">
- with :heart: <a href="https://bycedric.com" target="_blank">byCedric</a>
-</p>
+<div align="center">
+	<br />
+	with :heart: <strong>byCedric</strong>
+    <br />
+</div>
