@@ -5,7 +5,7 @@ import { TypographyProps } from './typography';
 
 export const Link: React.FC<LinkProps> = (props) => {
 	const ref = useRef();
-	const { isHovered } = useHover(ref);
+	const isHovered = useHover(ref);
 
 	return (
 		<Paragraph
