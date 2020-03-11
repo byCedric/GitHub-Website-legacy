@@ -20,7 +20,7 @@
 	},
 	"dependencies": {
 		"@apollo/react-hooks": "^3.1.3",
-		"@expo/next-adapter": "^2.0.1",
+		"@expo/next-adapter": "^2.0.7",
 		"@expo/vector-icons": "^10.0.6",
 		"@styled-system/css": "^5.1.4",
 		"@use-expo/font": "^1.0.0",
