@@ -26,7 +26,7 @@
 		"@use-expo/font": "^1.0.0",
 		"apollo-cache-inmemory": "^1.6.5",
 		"apollo-client": "^2.6.8",
-		"apollo-link-http": "^1.5.16",
+		"apollo-link-http": "^1.5.17",
 		"dotenv": "^8.2.0",
 		"expo": "^36.0.2",
 		"expo-asset": "~8.0.0",
