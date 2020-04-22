@@ -29,7 +29,7 @@
 		"apollo-link-http": "^1.5.17",
 		"dotenv": "^8.2.0",
 		"expo": "^36.0.2",
-		"expo-asset": "~8.0.0",
+		"expo-asset": "~8.1.4",
 		"expo-font": "~8.0.0",
 		"graphql": "^14.6.0",
 		"graphql-tag": "^2.10.3",
