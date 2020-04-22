@@ -23,7 +23,7 @@
 		"@expo/next-adapter": "^2.0.29",
 		"@expo/vector-icons": "^10.0.6",
 		"@styled-system/css": "^5.1.4",
-		"@use-expo/font": "^1.0.0",
+		"@use-expo/font": "^1.0.1",
 		"apollo-cache-inmemory": "^1.6.5",
 		"apollo-client": "^2.6.8",
 		"apollo-link-http": "^1.5.17",
