@@ -24,7 +24,7 @@
 		"@expo/vector-icons": "^10.1.0",
 		"@styled-system/css": "^5.1.5",
 		"@use-expo/font": "^1.0.1",
-		"apollo-cache-inmemory": "^1.6.5",
+		"apollo-cache-inmemory": "^1.6.6",
 		"apollo-client": "^2.6.8",
 		"apollo-link-http": "^1.5.17",
 		"dotenv": "^8.2.0",
