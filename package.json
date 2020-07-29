@@ -30,7 +30,7 @@
 		"dotenv": "^8.2.0",
 		"expo": "^36.0.2",
 		"expo-asset": "~8.0.0",
-		"expo-font": "~8.0.0",
+		"expo-font": "~8.2.2",
 		"graphql": "^14.6.0",
 		"graphql-tag": "^2.10.3",
 		"isomorphic-unfetch": "^3.0.0",
