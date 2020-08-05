@@ -28,7 +28,7 @@
 		"apollo-client": "^2.6.8",
 		"apollo-link-http": "^1.5.17",
 		"dotenv": "^8.2.0",
-		"expo": "^36.0.2",
+		"expo": "^38.0.9",
 		"expo-asset": "~8.0.0",
 		"expo-font": "~8.0.0",
 		"graphql": "^14.6.0",
