@@ -70,7 +70,7 @@
 		"jest": "^25.4.0",
 		"jest-expo": "^36.0.1",
 		"jest-styled-components": "^7.0.2",
-		"standard-version": "^7.1.0",
+		"standard-version": "^8.0.1",
 		"typescript": "^3.8.3"
 	},
 	"peerDependencies": {
