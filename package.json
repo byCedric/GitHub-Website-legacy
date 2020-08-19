@@ -68,7 +68,7 @@
 		"eslint-plugin-react": "^7.20.0",
 		"eslint-plugin-react-hooks": "^2.3.0",
 		"jest": "^25.4.0",
-		"jest-expo": "^36.0.1",
+		"jest-expo": "^37.0.0",
 		"jest-styled-components": "^7.0.2",
 		"standard-version": "^7.1.0",
 		"typescript": "^3.8.3"
