@@ -1,10 +1,6 @@
 {
 	"version": 2,
 	"name": "github-website",
-	"regions": [
-		"sfo1",
-		"bru"
-	],
 	"alias": [
 		"bycedric.now.sh",
 		"bycedric.com",
