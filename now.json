@@ -17,7 +17,7 @@
 		"env": {
 			"GITHUB_TOKEN": "@github-website-token",
 			"GITHUB_LOGIN": "bycedric",
-			"TWITTER_LOGIN": "cedricvanputten",
+			"TWITTER_LOGIN": "cedric_dev",
 			"DEVTO_LOGIN": "bycedric"
 		}
 	},
